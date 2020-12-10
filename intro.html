@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
+    <meta name="author" content="hci_08">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Forms</title>
+    <title>Tocky.vn - Nền tảng luyện gõ nhanh và chính xác</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -37,8 +37,7 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-
-        <!-- MENU SIDEBAR-->
+        <!-- sidebar ben phai-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="index.html">
@@ -48,7 +47,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a href="index.html">
                                 <i class="fas fa-home"></i>Trang chủ</a>
                         </li>
@@ -57,7 +56,7 @@
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
-                                        <a href="index.html">Học gõ từ</a>
+                                        <a href="learning1.html">Học gõ từ</a>
                                     </li>
                                     <li>
                                         <a href="index.html">Học gõ câu</a>
@@ -82,8 +81,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active has-sub">
-                            <a href="inbox.html">
+                        <li>
+                            <a href="index.html">
                                 <i class="fas fa-gamepad"></i>Trò chơi</a>
                         </li>
                         <li>
@@ -91,7 +90,7 @@
                                 <i class="fas fa-group"></i>Thi đấu</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="intro.html">
                                 <i class="fas fa-signal"></i>Xếp hạng</a>
                         </li>
                         <li>
@@ -102,7 +101,7 @@
                 </nav>
             </div>
         </aside>
-        <!-- END MENU SIDEBAR-->
+        <!-- sidebar ben phai-->
 
         <!-- PAGE CONTAINER-->
         <div class="page-container">
@@ -199,77 +198,65 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>Xếp gạch</h3>
-                                    </div>
-                                    <div class="au-task js-list-load">
-                                        <div class="au-task__title">
-                                            <p>Các viên gạch rơi xuống đất, bạn phải gõ tốc ký để phá chúng. Tốc độ rơi của viên gạch sẽ tăng dần theo thời gian.</p>
-                                        </div>
-                                        <div class="au-task__title">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label">Chế độ</label>
-                                                </div>
-                                                <div class="col col-md-6">
-                                                    <select name="select" id="Select" class="form-control-sm form-control">
-                                                        <option value="0">Chọn chế độ</option>
-                                                        <option value="1">Gõ âm tiết</option>
-                                                        <option value="2">Gõ từ</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__footer">
-                                           <a href="abc.html"> <button class="btn btn-primary btn-sm">Chơi ngay</button></a>
-                                        </div>
-                                    </div>
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Giới thiệu</h2>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>Chạy đua nước rút</h3>
-                                    </div>
-                                    <div class="au-task js-list-load">
-                                        <div class="au-task__title">
-                                                <p>Chạy nước rút trong thời gian 60s, bạn phải gõ tốc ký để hoàn thành văn bản. Level càng cao số từ càng nhiều.</p>
-                                        </div>
-                                        <div class="au-task__title">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label">Level</label>
-                                                </div>
-                                                <div class="col col-md-6">
-                                                    <select name="select1" id="Select1" class="form-control-sm form-control">
-                                                        <option value="0">Chọn level</option>
-                                                        <option value="1">Level 1: 30 từ</option>
-                                                        <option value="2">Level 2: 50 từ</option>
-                                                        <option value="3">Level 3: 70 từ</option>
-                                                        <option value="4">Level 4: 90 từ</option>
-                                                        <option value="5">Level 5: 100 từ</option>
-                                                        <option value="6">Level 6: 110 từ</option>
-                                                        <option value="7">Level 7: 120 từ</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            <div class="au-task__footer">
-                                                <a href="abc2.html"> <button class="btn btn-primary btn-sm">Chơi ngay</button></a>
-                                             </div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <br> <br>
+                        <div class="top-campaign">
+                            <h3 class="title-3 m-b-30">Về Chúng Tôi</h3>
+                            <div class="table-responsive">
+                                <table class="table ">
+                                    <thead class="font-weight-bold">
+                                        <td>Số thứ tự</td>
+                                        <td>Họ và tên</td>
+                                        <td>Mã Số Sinh Viên</td>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Nguyễn Đình Quang Anh</td>
+                                            <td>20172936</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Nguyễn Khương Duy</td>
+                                            <td>20173072</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Phạm Thành Đông</td>
+                                            <td>20173020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Trịnh Thị Hồng</td>
+                                            <td>20173147</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Trần Thị Minh Thu</td>
+                                            <td>20173392</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2020 HCI_08. All rights reserved.</p>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
         </div>
-        <!-- END PAGE CONTAINER-->
 
     </div>
 

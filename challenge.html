@@ -1,295 +1,365 @@
-<!-- 
- RC-PoS (https://appzaib.com/rc-pos)
- Copyright 2013-2018 BlackRock Digital, LLC, 2018 Vruqa Designs, 2018 Appzaib
- Licensed under MIT (https://github.com/appzaib/rc-pos/blob/master/LICENSE)
--->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Thách đấu</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body id="page-top">
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-      <a class="navbar-brand mr-1" href="index.html">HCI_08</a>
-      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-        <i class="fa fa-bars"></i>
-      </button>
-      <!-- Navbar Search -->
-      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-      <!-- Navbar -->
-      <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="nav-item dropdown no-arrow ml-3">
-          <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="badge badge-warning">9+</span>
-            <i class="fa fa-fw fa-bell"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Bạn đã hoàn thành 10 bài tập, xin chúc mừng !</a>
-            <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Bạn có thông báo mới</a>
-            <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Bạn có thông báo mới</a>
-            <a class="dropdown-item text-danger no-text-decorations" href="#"> <i class="fa fa-info-circle"></i> Bạn có thông báo mới</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="notifications.html">Xem thêm các thông báo khác</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown no-arrow ml-3">
-          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-user-circle fa-fw"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <div class="dropdown-header">HCI_08</div>
-            <a class="dropdown-item" href="profile.html"> <i class="fa fa-user"></i> Thông tin</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"> <i class="fa fa-cog"></i> Cài đặt</a>
-            <a class="dropdown-item" href="ranking.html"> <i class="fa fa-line-chart"></i> Xếp hạng</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"> <i class="fa fa-power-off"></i> Đăng xuất</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <ul class="sidebar navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-home"></i>
-            <span>Trang chủ</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sales-reports.html">
-            <i class="fa fa-fw fa-bar-chart"></i>
-            <span>Học gõ</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sales.html">
-            <i class="fa fa-fw fa-table"></i>
-            <span>Luyện tập</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="" data-toggle="modal" data-target="#addSaleModal">
-            <i class="fa fa-fw fa-plus"></i>
-            <span>Chơi trò chơi</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="product-vendors.html">
-            <i class="fa fa-fw fa-users"></i>
-            <span>Xếp hạng</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="challenge.html">
-            <i class="fa fa-fw fa-users"></i>
-            <span>Thách đấu</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="help.html">
-            <i class="fa fa-fw fa-life-ring"></i>
-            <span>Giới thiệu</span></a>
-        </li>
-      </ul>
-        <div id="content-wrapper">
-          <div class="container-fluid">
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html">Trang chủ</a>
-              </li>
-              <li class="breadcrumb-item active">Thách đấu</li>
-            </ol>
-            <!-- Page Content -->
-           
-          <!--Content-Text-->
-          <div class="content-text">
-            <h1 style="color:black; font-size: 30px;">Các đối thủ của bạn đã sẵn sàng. Thi đấu và nâng cao thứ hạng thôi !!!</h1>
-          </div>
-          <!-- DataTables Example -->
-          <div class="card mb-3">
-            <div class="card-header bg-primary text-white">
-              <i class="fa fa-table"></i>
-              Bảng xếp hạng đối thủ
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Hạng</th>
-                      <th>Tài khoản</th>
-                      <th>Phương châm</th>
-                      <th>Ngày thi đấu gần nhất</th>
-                      <th>Sẵn sàng</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Anh_chi_em_HCI_08</td>
-                      <td>Đã đấu là thắng</td>
-                      <td>28/10/2020</td>
-                      <td><a href="competition.html"><button style="color:white; border-color:black; border-width: 1px; background-color: blue;">Thách đấu</button></a></td>
-                    </tr>
 
-                  </tbody>
-                </table>
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="au theme template">
+  <meta name="author" content="Hau Nguyen">
+  <meta name="keywords" content="au theme template">
+
+  <!-- Title Page-->
+  <title>Forms</title>
+
+  <!-- Fontfaces CSS-->
+  <link href="css/font-face.css" rel="stylesheet" media="all">
+  <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+  <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+  <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS-->
+  <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+  <!-- Vendor CSS-->
+  <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+  <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+  <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+  <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+  <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+  <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+  <!-- Main CSS-->
+  <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+  <div class="page-wrapper">
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+        <a href="index.html">
+          <img class="svg imgsvg" src="images/icon/logo.svg" alt="hci08" />
+        </a>
+      </div>
+      <div class="menu-sidebar__content js-scrollbar1">
+        <nav class="navbar-sidebar">
+          <ul class="list-unstyled navbar__list">
+            <li class="has-sub">
+              <a href="index.html">
+                <i class="fas fa-home"></i>Trang chủ</a>
+            </li>
+            <li class="has-sub">
+              <a class="js-arrow" href="#">
+                <i class="fas fa-keyboard-o"></i>Học gõ</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
+                <li>
+                  <a href="index.html">Học gõ từ</a>
+                </li>
+                <li>
+                  <a href="index.html">Học gõ câu</a>
+                </li>
+                <li>
+                  <a href="index.html">Học gõ văn bản</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a class="js-arrow" href="#">
+                <i class="fas fa-list"></i>Luyện tập</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
+                <li>
+                  <a href="index.html">Luyện gõ từ</a>
+                </li>
+                <li>
+                  <a href="index.html">Luyện gõ câu</a>
+                </li>
+                <li>
+                  <a href="index.html">Luyện gõ văn bản</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fas fa-gamepad"></i>Trò chơi</a>
+            </li>
+            <li class="active">
+              <a href="challenge.html">
+                <i class="fas fa-group"></i>Thi đấu</a>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fas fa-signal"></i>Xếp hạng</a>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fas fa-info-circle"></i>Giới thiệu</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+      <!-- HEADER DESKTOP-->
+      <header class="header-desktop">
+        <div class="section__content section__content--p30">
+          <div class="container-fluid">
+            <div class="header-wrap">
+              <form class="form-header" action="" method="POST">
+                <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
+                <button class="au-btn--submit" type="submit">
+                  <i class="zmdi zmdi-search"></i>
+                </button>
+              </form>
+              <div class="header-button">
+                <div class="noti-wrap">
+                  <div class="noti__item js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <span class="quantity">3</span>
+                    <div class="notifi-dropdown js-dropdown">
+                      <div class="notifi__title">
+                        <p>Bạn có 3 thông báo mới</p>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c3 img-cir img-40">
+                          <i class="zmdi zmdi-file-text"></i>
+                        </div>
+                        <div class="content">
+                          <p>Bạn đã hoàn thành 60% bài luyện tập 20</p>
+                          <span class="date">Cách đây 5 phút</span>
+                        </div>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c1 img-cir img-40">
+                          <i class="zmdi zmdi-email-open"></i>
+                        </div>
+                        <div class="content">
+                          <p>Bạn đã hoàn thành bài luyện tập số 19</p>
+                          <span class="date">Cách đây 2 giờ</span>
+                        </div>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c2 img-cir img-40">
+                          <i class="zmdi zmdi-account-box"></i>
+                        </div>
+                        <div class="content">
+                          <p>Bạn bị quá hạn bài luyện tập số 5</p>
+                          <span class="date">Cách đây 2 ngày</span>
+                        </div>
+                      </div>
+
+                      <div class="notifi__footer">
+                        <a href="#">Xem toàn bộ thông báo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="account-wrap">
+                  <div class="account-item clearfix js-item-menu">
+                    <div class="image">
+                      <img src="images/icon/avatar.svg" />
+                    </div>
+                    <div class="content">
+                      <a class="js-acc-btn" href="#">Chu Nam An</a>
+                    </div>
+                    <div class="account-dropdown js-dropdown">
+                      <div class="account-dropdown__body">
+                        <div class="account-dropdown__item">
+                          <a href="#">
+                            <i class="zmdi zmdi-account"></i>Tài khoản</a>
+                        </div>
+                        <div class="account-dropdown__item">
+                          <a href="#">
+                            <i class="zmdi zmdi-settings"></i>Cài đặt</a>
+                        </div>
+                      </div>
+                      <div class="account-dropdown__footer">
+                        <a href="#">
+                          <i class="zmdi zmdi-power"></i>Đăng xuất</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
         </div>
-        <br><br><br>
-          <!-- Sticky Footer -->
-          <footer class="sticky-footer">
-            <div class="container my-auto">
-              <div class="copyright text-center my-auto ">
-                <br><br><br>
-                <small class="text-muted">
-                  You're using  v1.0 of this software. <a href="#"> <i class="fa fa-external-link"></i> Check for Updates</a>. In order to report a bug, please create an issue <a href="https://github.com/vruqa/rc-pos/issues">here.</a>
-                  <br><br><br>
-                  <a href="#">Legal</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Advertisements</a>
-                </small>
-                <br><br><br>
-                <span>Copyright &copy; 2013-2018 <a href="#">Blackrock Digital, LLC.</a>, 2018 <a href="https://vruqa.github.io">Vruqa Designs</a>, 2018 <a href="https://appzaib.github.io">Appzaib</a>. All rights reserved.</span>
-                <br><br><br>
+      </header>
+      <!-- HEADER DESKTOP-->
+
+      <!-- MAIN CONTENT-->
+      <div class="main-content">
+        <div class="section__content section__content--p30">
+          <div class="container-fluid">
+
+            <!-- content -->
+            <div class="content-text">
+
+              <h1 style="color:black; font-size: 30px;">Bật chế độ sẵn sàng thi đấu
+                <button class="au-btn--submit" type="submit">
+                  <a href="challenge2.html" style="color: aliceblue;">Sẵn sàng</a>
+                </button></h1>
+            </div>
+            <!-- Thông tin thi đấu -->
+            <div class="au-card chart-percent-card">
+              <div class="au-card-inner">
+                  <h3 class="title-2 tm-b-5">Thành tích thi đấu</h3>
+                  <div class="row no-gutters">
+                      <div class="col-xl-4">
+                          <div class="chart-note-wrap">
+                              <div class="chart-note mr-0 d-block">
+                                  <span class="dot dot--blue"></span>
+                                  <span>Thắng</span>
+                              </div>
+                              <div class="chart-note mr-0 d-block">
+                                  <span class="dot dot--red"></span>
+                                  <span>Thua</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-8">
+                          <div class="percent-chart">
+                              <canvas id="percent-chart"></canvas>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </footer>
-        </div>
-      </div>
-      <!-- Scroll to Top Button-->
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fa fa-angle-up"></i>
-      </a>
-      <!-- Modals -->
-      <!-- Logout Modal-->
-      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header bg-danger text-white">
-              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-              <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-danger" href="login.html">Logout</a>
+          </div>
+            <!-- Lịch sử thi đấu -->
+            <div class="card mb-3">
+              <div class="table-responsive table--no-card m-b-30">
+                <div class="card-header bg-primary text-white">
+                  <i class="fa fa-table"></i>
+                  Lịch sử thi đấu
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <!-- <table class="table table-borderless table-striped table-bordered"> -->
+                    <table class="table table-bordered" id="dataHistoryChallenge" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Ngày thi đấu</th>
+                          <th>Đối thủ</th>
+                          <th>Kết quả</th>
+                          <th class="text-right">Hạng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2020-09-29 05:57</td>
+                          <td>Nam đz</td>
+                          <td>Chiến thắng</td>
+                          <td class="text-right">Đồng II</td>
+                        </tr>
+                        <tr>
+                          <td>2020-09-28 01:22</td>
+                          <td>Phương ngo</td>
+                          <td>Thua cuộc</td>
+                          <td class="text-right">Đồng I</td>
+                        </tr>
+                        <tr>
+                          <td>2020-09-27 02:12</td>
+                          <td>Minh Thu</td>
+                          <td>Chiến thắng</td>
+                          <td class="text-right">Đồng II</td>
+                        </tr>
+                        <!-- <tr>
+                        <td>2018-09-26 23:06</td>
+                        <td>100395</td>
+                        <td>iPhone X 256Gb Black</td>
+                        <td class="text-right">$1199.00</td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">$1199.00</td>
+                      </tr>
+                      <tr>
+                        <td>2018-09-25 19:03</td>
+                        <td>100393</td>
+                        <td>USB 3.0 Cable</td>
+                        <td class="text-right">$10.00</td>
+                        <td class="text-right">3</td>
+                        <td class="text-right">$30.00</td>
+                      </tr>
+                      <tr>
+                        <td>2018-09-29 05:57</td>
+                        <td>100392</td>
+                        <td>Smartwatch 4.0 LTE Wifi</td>
+                        <td class="text-right">$199.00</td>
+                        <td class="text-right">6</td>
+                        <td class="text-right">$1494.00</td>
+                      </tr>
+                      <tr>
+                        <td>2018-09-24 19:10</td>
+                        <td>100391</td>
+                        <td>Camera C430W 4k</td>
+                        <td class="text-right">$699.00</td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">$699.00</td>
+                      </tr>
+                      <tr>
+                        <td>2018-09-22 00:43</td>
+                        <td>100393</td>
+                        <td>USB 3.0 Cable</td>
+                        <td class="text-right">$10.00</td>
+                        <td class="text-right">3</td>
+                        <td class="text-right">$30.00</td> -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2020 HCI_08. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div> -->
             </div>
           </div>
         </div>
       </div>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/chart.min.js"></script>
-      <script src="js/jquery.dataTables.js"></script>
-      <script src="js/dataTables.bootstrap4.js"></script>
-      <script src="js/rc-pos.min.js"></script>
-      <script src="js/datatables-demo.js"></script>
-      <script src="js/chart-area-demo.js"></script>
-      <script src="js/chart-bar-demo.js"></script>
-      <script src="js/chart-pie-demo.js"></script>
-    </body>
-  </html>
+    </div>
+
+  </div>
+
+  <!-- Jquery JS-->
+  <script src="vendor/jquery-3.2.1.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+  <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+  <!-- Vendor JS       -->
+  <script src="vendor/slick/slick.min.js">
+  </script>
+  <script src="vendor/wow/wow.min.js"></script>
+  <script src="vendor/animsition/animsition.min.js"></script>
+  <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+  </script>
+  <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+  <script src="vendor/counter-up/jquery.counterup.min.js">
+  </script>
+  <script src="vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+  <script src="vendor/select2/select2.min.js">
+  </script>
+
+  <!-- Main JS-->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

@@ -198,71 +198,30 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>Xếp gạch</h3>
-                                    </div>
-                                    <div class="au-task js-list-load">
-                                        <div class="au-task__title">
-                                            <p>Các viên gạch rơi xuống đất, bạn phải gõ tốc ký để phá chúng. Tốc độ rơi của viên gạch sẽ tăng dần theo thời gian.</p>
-                                        </div>
-                                        <div class="au-task__title">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label">Chế độ</label>
-                                                </div>
-                                                <div class="col col-md-6">
-                                                    <select name="select" id="Select" class="form-control-sm form-control">
-                                                        <option value="0">Chọn chế độ</option>
-                                                        <option value="1">Gõ âm tiết</option>
-                                                        <option value="2">Gõ từ</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__footer">
-                                           <a href="abc.html"> <button class="btn btn-primary btn-sm">Chơi ngay</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>Chạy đua nước rút</h3>
-                                    </div>
-                                    <div class="au-task js-list-load">
-                                        <div class="au-task__title">
-                                                <p>Chạy nước rút trong thời gian 60s, bạn phải gõ tốc ký để hoàn thành văn bản. Level càng cao số từ càng nhiều.</p>
-                                        </div>
-                                        <div class="au-task__title">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label">Level</label>
-                                                </div>
-                                                <div class="col col-md-6">
-                                                    <select name="select1" id="Select1" class="form-control-sm form-control">
-                                                        <option value="0">Chọn level</option>
-                                                        <option value="1">Level 1: 30 từ</option>
-                                                        <option value="2">Level 2: 50 từ</option>
-                                                        <option value="3">Level 3: 70 từ</option>
-                                                        <option value="4">Level 4: 90 từ</option>
-                                                        <option value="5">Level 5: 100 từ</option>
-                                                        <option value="6">Level 6: 110 từ</option>
-                                                        <option value="7">Level 7: 120 từ</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            <div class="au-task__footer">
-                                                <a href="abc2.html"> <button class="btn btn-primary btn-sm">Chơi ngay</button></a>
-                                             </div>
-                                        </div>
-                                    </div>
+                        <div>
+                            <button><img id="slider"  src="images/icon/xepgach1.PNG" onkeyup="changeImage()"/></button>
+
+                        </div>
+                        <script>
+                            var images = ["images/icon/xepgach1.PNG",
+                                "images/icon/xepgach3.PNG",
+                                "images/icon/xepgach2.PNG",
+                                "images/icon/xepgach4.PNG"];
+                            var num = 0;
+
+                            function changeImage() {
+                                var slider = document.getElementById("slider");
+                                num++;
+                                if(num >= images.length) {
+                                     num = 0;
+                                }
+                                slider.src = images[num];
+                                   // document.writeln(images[num%2]);
+                                    // }
+                            }
+
+                        </script>
+
                                 </div>
                             </div>
                     </div>

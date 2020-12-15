@@ -6,7 +6,7 @@ function getKeySteno(e) {
     } else {
         var code = e.keyCode || e.which;
         selector = [
-            '[data-key="' + code + '"]',
+            '[data-key-steno="' + code + '"]',
             '[data-char-steno*="' + encodeURIComponent(String.fromCharCode(code)) + '"]'
         ].join(',');
     }

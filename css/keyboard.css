@@ -50,6 +50,7 @@ h1 {
     position: relative;
     background: #333;
     text-align: center;
+    text-align: justify;
     color: #eee;
     float: left;
     border-radius: 0.3em;
@@ -131,7 +132,8 @@ h1 {
 }
 
 .key--double>* {
-    padding-top: 0.1em;
+    margin-top: -2px;
+    margin-left: 8px;
 }
 
 .key--letter {

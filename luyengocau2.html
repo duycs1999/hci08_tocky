@@ -536,27 +536,6 @@
         </div>
 
 
-        <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Bạn đã gõ đúng, chúc mừng bạn, mời bạn làm bài tiếp theo
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" ><a href="luyengocau2.html" style="color: white">Làm lại</a></button>
-                        <button type="button" class="btn btn-primary"><a href="luyengocau3.html" style="color: white">Bài khác</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="modal fade" id="smallmodalFalse" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
@@ -567,13 +546,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>
+                        <!-- <p>
                             Bạn đã sai, bạn nên làm lại bài này
-                        </p>
+                        </p> -->
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"><a href=""></a>Bài trước</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Làm lại</button>
-                        <button type="button" class="btn btn-primary"><a href=""></a>Bài khác</button>
+                        <button type="button" class="btn btn-primary"><a href=""></a>Bài mới</button>
                     </div>
                 </div>
             </div>
@@ -621,9 +601,13 @@
             let e = document.getElementById("answerSentence").value;
             console.log("ky tu vua go: ", e);
             if (e === "Mẹ mua áo mới cho An"){
-                document.getElementById("demo1").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
             console.log(e);
         }

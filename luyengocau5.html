@@ -621,9 +621,13 @@
             let e = document.getElementById("answerSentence").value;
             console.log("ky tu vua go: ", e);
             if (e === "Dân tộc Việt Nam là một dân tộc anh hùng"){
-                document.getElementById("demo1").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
             console.log(e);
         }

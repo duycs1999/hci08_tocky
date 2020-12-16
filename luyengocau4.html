@@ -622,9 +622,13 @@
             let e = document.getElementById("answerSentence").value;
             console.log("ky tu vua go: ", e);
             if (e === "Môn học không tự sinh ra cũng không tự mất đi, nó chỉ chuyển từ học kỳ này qua học kỳ học khác"){
-                document.getElementById("demo1").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
             console.log(e);
         }

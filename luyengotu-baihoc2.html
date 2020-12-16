@@ -74,7 +74,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class=" active has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-list"></i>Luyện tập</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -204,400 +204,403 @@
             </header>
             <!-- HEADER DESKTOP-->
 
-        <!-- MAIN CONTENT-->
-        <div class="main-content">
-            <div class="section__content section__content--p30">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="overview-wrap">
-                                <h2 class="title-1">Học gõ âm tiết đầu</h2>
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Luyện gõ từ: Âm đầu + Âm chính</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card" style="margin-left: auto;
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card" style="margin-left: auto;
                             margin-right: auto;">
-                                <div class="card-header">
-                                    <strong class="card-title mb-3">Level 2</strong>
-                                </div>
-                                <div class="card-body">
-                                    <p class="text-muted m-b-15">Âm tiết cần gõ</p>
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Bài số 2</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-muted m-b-15">Từ cần gõ</p>
 
-                                    <h1>Xương</h1>
-                                    <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
-                                    <br>
-                                    <div style="  display: flex;
+                                        <h1 id="tu">CỌ</h1>
+                                        <input id="answer" onchange="check()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <br>
+                                        <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2();">Kiểm tra</button></div>
+                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success">Kết thúc</button></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <p id="demo" style="color: red;"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Đếm giờ</strong>
+                                    </div>
+                                    <h1>
+                                        <span id="min">00</span> :
+                                        <span id="sec">00</span> :
+                                        <span id="milisec">00</span>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-md-2" style="margin-left: 90px">
+                                            <button class="btn btn-primary" onclick="startStop()" id="start">Bắt đầu</button>
+
+                                        </div>
+                                        <div class="col-md-2" style="margin-left: 25px;">
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset( )" id="star t">Đặt
+                                                lại</button>
+                                            <div class="row ">
+                                                <p id="demo " style="color: red; "></p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong class="card-title mb-3">Số từ gõ đúng</strong>
-                                </div>
-                                <br><br>
 
-                                <h1>
-                                    <span id="sec">01</span>
-                                </h1>
-                                <br><br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="demo" ></p>
-                    </div>
 
-                    <!-- keyboard -->
-                    <div class="row ">
-                        <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
-                            <div class="keyboard ">
+                        <!-- keyboard -->
+                        <div class="row ">
+                            <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
+                                <div class="keyboard ">
 
-                                <div class="keyboard__row ">
-                                    <div class="key--double " data-key="192 ">
-                                        <div>~</div>
-                                        <div>`</div>
+                                    <div class="keyboard__row ">
+                                        <div class="key--double " data-key="192 ">
+                                            <div>~</div>
+                                            <div>`</div>
+                                        </div>
+                                        <div class="key--double " data-key="49 ">
+                                            <div>!</div>
+                                            <div>1</div>
+                                        </div>
+                                        <div class="key--double " data-key="50 ">
+                                            <div>@</div>
+                                            <div>2</div>
+                                        </div>
+                                        <div class="key--double " data-key="51 ">
+                                            <div>#</div>
+                                            <div>3</div>
+                                        </div>
+                                        <div class="key--double " data-key="52 ">
+                                            <div>$</div>
+                                            <div>4</div>
+                                        </div>
+                                        <div class="key--double " data-key="53 ">
+                                            <div>%</div>
+                                            <div>5</div>
+                                        </div>
+                                        <div class="key--double " data-key="54 ">
+                                            <div>^</div>
+                                            <div>6</div>
+                                        </div>
+                                        <div class="key--double " data-key="55 ">
+                                            <div>&</div>
+                                            <div>7</div>
+                                        </div>
+                                        <div class="key--double " data-key="56 ">
+                                            <div>*</div>
+                                            <div>8</div>
+                                        </div>
+                                        <div class="key--double " data-key="57 ">
+                                            <div>(</div>
+                                            <div>9</div>
+                                        </div>
+                                        <div class="key--double " data-key="48 ">
+                                            <div>)</div>
+                                            <div>0</div>
+                                        </div>
+                                        <div class="key--double " data-key="189 ">
+                                            <div>_</div>
+                                            <div>-</div>
+                                        </div>
+                                        <div class="key--double " data-key="187 ">
+                                            <div>+</div>
+                                            <div>=</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w4 " data-key="8 ">
+                                            <span>delete</span>
+                                        </div>
                                     </div>
-                                    <div class="key--double " data-key="49 ">
-                                        <div>!</div>
-                                        <div>1</div>
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w4 " data-key="9 ">
+                                            <span>tab</span>
+                                        </div>
+                                        <div class="key--letter " data-char="Q ">Q</div>
+                                        <div class="key--letter " data-char="W ">W</div>
+                                        <div class="key--letter " data-char="E ">E</div>
+                                        <div class="key--letter " data-char="R ">R</div>
+                                        <div class="key--letter " data-char="T ">T</div>
+                                        <div class="key--letter " data-char="Y ">Y</div>
+                                        <div class="key--letter " data-char="U ">U</div>
+                                        <div class="key--letter " data-char="I ">I</div>
+                                        <div class="key--letter " data-char="O ">O</div>
+                                        <div class="key--letter " data-char="P ">P</div>
+                                        <div class="key--double " data-key="219 " data-char="{[ ">
+                                            <div>{</div>
+                                            <div>[</div>
+                                        </div>
+                                        <div class="key--double " data-key="221 " data-char="}] ">
+                                            <div>}</div>
+                                            <div>]</div>
+                                        </div>
+                                        <div class="key--double " data-key="220 " data-char="|\ ">
+                                            <div>|</div>
+                                            <div>\</div>
+                                        </div>
                                     </div>
-                                    <div class="key--double " data-key="50 ">
-                                        <div>@</div>
-                                        <div>2</div>
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w5 " data-key="20 ">
+                                            <span>caps lock</span>
+                                        </div>
+                                        <div class="key--letter " data-char="A ">A</div>
+                                        <div class="key--letter " data-char="S ">S</div>
+                                        <div class="key--letter " data-char="D ">D</div>
+                                        <div class="key--letter " data-char="F ">F</div>
+                                        <div class="key--letter " data-char="G ">G</div>
+                                        <div class="key--letter " data-char="H ">H</div>
+                                        <div class="key--letter " data-char="J ">J</div>
+                                        <div class="key--letter " data-char="K ">K</div>
+                                        <div class="key--letter " data-char="L ">L</div>
+                                        <div class="key--double " data-key="186 ">
+                                            <div>:</div>
+                                            <div>;</div>
+                                        </div>
+                                        <div class="key--double " data-key="222 ">
+                                            <div>"</div>
+                                            <div>'</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w5" data-key="13">
+                                            <span>return</span>
+                                        </div>
                                     </div>
-                                    <div class="key--double " data-key="51 ">
-                                        <div>#</div>
-                                        <div>3</div>
+                                    <div class="keyboard__row">
+                                        <div class="key--bottom-left key--word key--w6" data-key="16">
+                                            <span>shift</span>
+                                        </div>
+                                        <div class="key--letter" data-char="Z">Z</div>
+                                        <div class="key--letter" data-char="X">X</div>
+                                        <div class="key--letter" data-char="C">C</div>
+                                        <div class="key--letter" data-char="V">V</div>
+                                        <div class="key--letter" data-char="B">B</div>
+                                        <div class="key--letter" data-char="N">N</div>
+                                        <div class="key--letter" data-char="M">M</div>
+                                        <div class="key--double" data-key="188">
+                                            <div>&lt;</div>
+                                            <div>,</div>
+                                        </div>
+                                        <div class="key--double" data-key="190">
+                                            <div>&gt;</div>
+                                            <div>.</div>
+                                        </div>
+                                        <div class="key--double" data-key="191">
+                                            <div>?</div>
+                                            <div>/</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w6" data-key="16-R">
+                                            <span>shift</span>
+                                        </div>
                                     </div>
-                                    <div class="key--double " data-key="52 ">
-                                        <div>$</div>
-                                        <div>4</div>
-                                    </div>
-                                    <div class="key--double " data-key="53 ">
-                                        <div>%</div>
-                                        <div>5</div>
-                                    </div>
-                                    <div class="key--double " data-key="54 ">
-                                        <div>^</div>
-                                        <div>6</div>
-                                    </div>
-                                    <div class="key--double " data-key="55 ">
-                                        <div>&</div>
-                                        <div>7</div>
-                                    </div>
-                                    <div class="key--double " data-key="56 ">
-                                        <div>*</div>
-                                        <div>8</div>
-                                    </div>
-                                    <div class="key--double " data-key="57 ">
-                                        <div>(</div>
-                                        <div>9</div>
-                                    </div>
-                                    <div class="key--double " data-key="48 ">
-                                        <div>)</div>
-                                        <div>0</div>
-                                    </div>
-                                    <div class="key--double " data-key="189 ">
-                                        <div>_</div>
-                                        <div>-</div>
-                                    </div>
-                                    <div class="key--double " data-key="187 ">
-                                        <div>+</div>
-                                        <div>=</div>
-                                    </div>
-                                    <div class="key--bottom-right key--word key--w4 " data-key="8 ">
-                                        <span>delete</span>
-                                    </div>
-                                </div>
-                                <div class="keyboard__row ">
-                                    <div class="key--bottom-left key--word key--w4 " data-key="9 ">
-                                        <span>tab</span>
-                                    </div>
-                                    <div class="key--letter " data-char="Q ">Q</div>
-                                    <div class="key--letter " data-char="W ">W</div>
-                                    <div class="key--letter " data-char="E ">E</div>
-                                    <div class="key--letter " data-char="R ">R</div>
-                                    <div class="key--letter " data-char="T ">T</div>
-                                    <div class="key--letter " data-char="Y ">Y</div>
-                                    <div class="key--letter " data-char="U ">U</div>
-                                    <div class="key--letter " data-char="I ">I</div>
-                                    <div class="key--letter " data-char="O ">O</div>
-                                    <div class="key--letter " data-char="P ">P</div>
-                                    <div class="key--double " data-key="219 " data-char="{[ ">
-                                        <div>{</div>
-                                        <div>[</div>
-                                    </div>
-                                    <div class="key--double " data-key="221 " data-char="}] ">
-                                        <div>}</div>
-                                        <div>]</div>
-                                    </div>
-                                    <div class="key--double " data-key="220 " data-char="|\ ">
-                                        <div>|</div>
-                                        <div>\</div>
-                                    </div>
-                                </div>
-                                <div class="keyboard__row ">
-                                    <div class="key--bottom-left key--word key--w5 " data-key="20 ">
-                                        <span>caps lock</span>
-                                    </div>
-                                    <div class="key--letter " data-char="A ">A</div>
-                                    <div class="key--letter " data-char="S ">S</div>
-                                    <div class="key--letter " data-char="D ">D</div>
-                                    <div class="key--letter " data-char="F ">F</div>
-                                    <div class="key--letter " data-char="G ">G</div>
-                                    <div class="key--letter " data-char="H ">H</div>
-                                    <div class="key--letter " data-char="J ">J</div>
-                                    <div class="key--letter " data-char="K ">K</div>
-                                    <div class="key--letter " data-char="L ">L</div>
-                                    <div class="key--double " data-key="186 ">
-                                        <div>:</div>
-                                        <div>;</div>
-                                    </div>
-                                    <div class="key--double " data-key="222 ">
-                                        <div>"</div>
-                                        <div>'</div>
-                                    </div>
-                                    <div class="key--bottom-right key--word key--w5" data-key="13">
-                                        <span>return</span>
-                                    </div>
-                                </div>
-                                <div class="keyboard__row">
-                                    <div class="key--bottom-left key--word key--w6" data-key="16">
-                                        <span>shift</span>
-                                    </div>
-                                    <div class="key--letter" data-char="Z">Z</div>
-                                    <div class="key--letter" data-char="X">X</div>
-                                    <div class="key--letter" data-char="C">C</div>
-                                    <div class="key--letter" data-char="V">V</div>
-                                    <div class="key--letter" data-char="B">B</div>
-                                    <div class="key--letter" data-char="N">N</div>
-                                    <div class="key--letter" data-char="M">M</div>
-                                    <div class="key--double" data-key="188">
-                                        <div>&lt;</div>
-                                        <div>,</div>
-                                    </div>
-                                    <div class="key--double" data-key="190">
-                                        <div>&gt;</div>
-                                        <div>.</div>
-                                    </div>
-                                    <div class="key--double" data-key="191">
-                                        <div>?</div>
-                                        <div>/</div>
-                                    </div>
-                                    <div class="key--bottom-right key--word key--w6" data-key="16-R">
-                                        <span>shift</span>
-                                    </div>
-                                </div>
-                                <div class="keyboard__row keyboard__row--h3">
-                                    <div class="key--bottom-left key--word">
-                                        <span>fn</span>
-                                    </div>
-                                    <div class="key--bottom-left key--word key--w1" data-key="17">
-                                        <span>control</span>
-                                    </div>
-                                    <div class="key--bottom-left key--word key--w1" data-key="18">
-                                        <span>option</span>
-                                    </div>
-                                    <div class="key--bottom-right key--word key--w3" data-key="91">
-                                        <span>command</span>
-                                    </div>
-                                    <div class="key--double key--right key--space" data-key="32" data-char=" ">
-                                        &nbsp;
-                                    </div>
-                                    <div class="key--bottom-left key--word key--w3" data-key="93-R">
-                                        <span>command</span>
-                                    </div>
-                                    <div class="key--bottom-left key--word key--w1" data-key="18-R">
-                                        <span>option</span>
-                                    </div>
-                                    <div data-key="37" class="key--arrow">
-                                        <span>&#9664;</span>
-                                    </div>
-                                    <div class="key--double key--arrow--tall" data-key="38">
-                                        <div>&#9650;</div>
-                                        <div>&#9660;</div>
-                                    </div>
-                                    <div data-key="39" class="key--arrow">
-                                        <span>&#9654;</span>
+                                    <div class="keyboard__row keyboard__row--h3">
+                                        <div class="key--bottom-left key--word">
+                                            <span>fn</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="17">
+                                            <span>control</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="18">
+                                            <span>option</span>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w3" data-key="91">
+                                            <span>command</span>
+                                        </div>
+                                        <div class="key--double key--right key--space" data-key="32" data-char=" ">
+                                            &nbsp;
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w3" data-key="93-R">
+                                            <span>command</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="18-R">
+                                            <span>option</span>
+                                        </div>
+                                        <div data-key="37" class="key--arrow">
+                                            <span>&#9664;</span>
+                                        </div>
+                                        <div class="key--double key--arrow--tall" data-key="38">
+                                            <div>&#9650;</div>
+                                            <div>&#9660;</div>
+                                        </div>
+                                        <div data-key="39" class="key--arrow">
+                                            <span>&#9654;</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6" style="transform: scale(1.5,1.5);
+                            <div class="col-md-6" style="transform: scale(1.5,1.5);
                             margin-left: 0;
                             margin-right: 0px;
                             margin-top: 50px;">
-                            <div class="keyboard-steno">
-                                <div class="keyboard__row__steno">
-                                    <div class="key--letter" data-char-steno="Q">S</div>
-                                    <div class="key--letter" data-char-steno="W">K</div>
-                                    <div class="key--letter" data-char-steno="E">R</div>
-                                    <div class="key--letter" data-char-steno="R">N</div>
-                                    <div class="key--letter" data-char-steno="T">H</div>
-                                    <div class="key--letter" data-char-steno="U">*</div>
-                                    <div class="key--letter" data-char-steno="I">W</div>
-                                    <div class="key--letter" data-char-steno="O">J</div>
-                                    <div class="key--letter" data-char-steno="P">N</div>
-                                    <div class="key--letter" data-key-steno="219" data-char-steno="{[">T</div>
+                                <div class="keyboard-steno">
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="Q">S</div>
+                                        <div class="key--letter" data-char-steno="W">K</div>
+                                        <div class="key--letter" data-char-steno="E">R</div>
+                                        <div class="key--letter" data-char-steno="R">N</div>
+                                        <div class="key--letter" data-char-steno="T">H</div>
+                                        <div class="key--letter" data-char-steno="U">*</div>
+                                        <div class="key--letter" data-char-steno="I">W</div>
+                                        <div class="key--letter" data-char-steno="O">J</div>
+                                        <div class="key--letter" data-char-steno="P">N</div>
+                                        <div class="key--letter" data-key-steno="219" data-char-steno="{[">T</div>
+                                    </div>
+                                    <br>
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" id="steno-key" data-char-steno="A">T</div>
+                                        <div class="key--letter" data-char-steno="S">P</div>
+                                        <div class="key--letter" data-char-steno="D">H</div>
+                                        <div class="key--letter" data-char-steno="F">N</div>
+                                        <div class="key--letter" data-char-steno="G">S</div>
+                                        <div class="key--letter" data-char-steno="J">I</div>
+                                        <div class="key--letter" data-char-steno="K">Y</div>
+                                        <div class="key--letter" data-char-steno="L">J</div>
+
+                                        <!-- dau ';' -->
+
+                                        <div class="key--letter" data-key-steno="186">G</div>
+                                        <div class="key--letter" data-key-steno="222">K</div>
+                                    </div><br>
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="C">U</div>
+                                        <div class="key--letter" data-char-steno="V">O</div>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="N">E</div>
+                                        <div class="key--letter" data-char-steno="M">A</div>
+                                    </div>
                                 </div>
                                 <br>
-                                <div class="keyboard__row__steno">
-                                    <div class="key--letter" id="steno-key" data-char-steno="A">T</div>
-                                    <div class="key--letter" data-char-steno="S">P</div>
-                                    <div class="key--letter" data-char-steno="D">H</div>
-                                    <div class="key--letter" data-char-steno="F">N</div>
-                                    <div class="key--letter" data-char-steno="G">S</div>
-                                    <div class="key--letter" data-char-steno="J">I</div>
-                                    <div class="key--letter" data-char-steno="K">Y</div>
-                                    <div class="key--letter" data-char-steno="L">J</div>
-
-                                    <!-- dau ';' -->
-
-                                    <div class="key--letter" data-key-steno="186">G</div>
-                                    <div class="key--letter" data-key-steno="222">K</div>
-                                </div><br>
-                                <div class="keyboard__row__steno">
-                                    <div class="key--letter" data-char-steno="C">U</div>
-                                    <div class="key--letter" data-char-steno="V">O</div>
-                                </div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <div class="keyboard__row__steno">
-                                    <div class="key--letter" data-char-steno="N">E</div>
-                                    <div class="key--letter" data-char-steno="M">A</div>
+                                <div style="margin-left: 180px;">
+                                    <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Bật gợi ý
+                                    </button>
+                                    <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Tắt gợi ý
+                                    </button>
                                 </div>
                             </div>
-                            <br>
-                            <div style="margin-left: 180px;">
-                                <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Bật gợi ý
-                                </button>
-                                <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Tắt gợi ý
-                                </button>
-                            </div>
+
                         </div>
+                        <br><br>
 
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="copyright">
-                            <p>Copyright © 2020 HCI_08. All rights reserved.</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2020 HCI_08. All rights reserved.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="textSmallModal">
-                    <!-- <p>
-                        Bạn đã gõ sai, bạn nên làm lại bài này
-                    </p> -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" ><a href="hocGoAmTietDau2.html" style="color: white">Làm lại</a></button>
-                    <button type="button" class="btn btn-primary"><a href="hocGoAmTietDau3.html" style="color: white">Bài khác</a></button>
+        <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Bạn muốn làm bài tiếp theo không?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="luyengotu-baihoc.html"><button class="btn btn-secondary">Quay lại</button></a>
+                        <a href="luyengotu-baihoc3.html"><button type="button" class="btn btn-primary">Bài tiếp</button></a>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
+        <!-- END MAIN CONTENT-->
+        <!-- END PAGE CONTAINER-->
     </div>
-    <!-- END MAIN CONTENT-->
-    <!-- END PAGE CONTAINER-->
-</div>
 
-</div>
+    </div>
 
-<!-- Jquery JS-->
-<script src="vendor/jquery-3.2.1.min.js"></script>
-<!-- Bootstrap JS-->
-<script src="vendor/bootstrap-4.1/popper.min.js"></script>
-<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-<!-- Vendor JS       -->
-<script src="vendor/slick/slick.min.js">
-</script>
-<script src="vendor/wow/wow.min.js"></script>
-<script src="vendor/animsition/animsition.min.js"></script>
-<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-</script>
-<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendor/counter-up/jquery.counterup.min.js">
-</script>
-<script src="vendor/circle-progress/circle-progress.min.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-<script src="vendor/chartjs/Chart.bundle.min.js"></script>
-<script src="vendor/select2/select2.min.js">
-</script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
 
-<!-- Main JS-->
-<script src="js/main.js"></script>
-<script src="js/keyboard.js"></script>
-<script src="js/keyboard2.js"></script>
-<link rel="stylesheet" href="./css/keyboard.css">
-<script>
-    let flag = false;
-    function show() {
-        document.getElementById("demo").innerHTML = "Ký tự cần nhập: Q-I-A-;-N";
-        document.getElementById("demo").style.color = "blue";
-    }
-    function hide() {
-        document.getElementById("demo").innerHTML = "";
-    }
-
-    function startCount() {
-        this.reset()
-        this.startStop()
-    }
-    function click(){
-        startStop()
-        flag = true;
-        console.log("falgggg", flag);
-    }
-
-    function checkSentance() {
-        let e = document.getElementById("answerSentence").value;
-        if (e === "Xương"){
-            document.getElementById("demo").innerHTML = "Bạn nhập đúng, chuyển sang âm tiếp theo!";
-            document.getElementById("demo").style.color = "blue";
-        } else {
-            document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
-            document.getElementById("demo").style.color = "red";
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/keyboard2.js"></script>
+    <script src="js/stopwatch.js">
+    </script>
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <script>
+        function show() {
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: N-N O K";
         }
-    }
-    function checkSentance2(){
-        let e = document.getElementById("answerSentence").value;
-        if (e === "Xương"){
+
+        function hide() {
             document.getElementById("demo").innerHTML = "";
-            document.getElementById("demo").style.color = "blue";
-            document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, chuyển sang âm tiếp theo!";
-        } else {
-            document.getElementById("demo").innerHTML = "";
-            document.getElementById("demo").style.color = "red";
-            document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
         }
-        console.log("flag",flag);
-        if (flag) {
-            startStop()
+
+
+        function check() {
+            let e = document.getElementById("answer").value;
+            console.log("ky tu vua go: ", e);
+            e = e.toUpperCase()
+            if (e === "CỌ") {
+                document.getElementById("tu").innerHTML = "BÊ";
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("answer").value = "";
+            } else {
+                document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
+            }
+            console.log(e);
         }
-    }
-</script>
-<script src="js/stopwatch.js">
-</script>
+    </script>
 </body>
 
 </html>

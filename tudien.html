@@ -222,31 +222,41 @@
                     </div>
                 </div>
                 <div class="row">
-                        <div class="card col-md-5" style="margin-left: auto;
+                    <div class="col-md-5" style="margin-left: auto;
                     margin-right: auto;">
+                        <div class="card">
                             <div class="card-header">
-                                <strong class="card-title mb-3">Nhập chuỗi cần tra cứu</strong>
+                                <strong class="card-title mb-3">Nhập kí tự cần tra cứu</strong>
                             </div>
                             <div class="card-body">
-                                <input id="start" onclick="checkChangeText()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Nhập vào đây:">
+                                <input id="searchText" onclick="checkChangeText()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Nhập vào đây:">
                                 <br>
                                 <div style="  display: flex;
-                                align-items: center;
-                                justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="check()">Tra cứu
-                                        </button></div>
+                                    align-items: center;
+                                    justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="search()">Tra cứu
+                                            </button></div>
                             </div>
                         </div>
+                    </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-md-12">
-                        <div class="copyright">
-                            <p>Copyright © 2020 HCI_08. All rights reserved.</p>
+                <div class="row" id="searchPanel" style="display:none">
+                    <div class=" col-md-4 " style="margin-left: auto; margin-right: auto; ">
+                        <div class="card ">
+                            <div class="card-header ">
+                                <strong class="card-title mb-3 ">Phím cần gõ</strong>
+                            </div>
+                            <div class="card-body" style="margin-left:auto;margin-right:auto;">
+                                </br>
+                                <h3 id="searchResult"></h3>
+                            </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
+                <br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
                 <footer>
-                    <div class="col-md-12">
-                        <div class="copyright">
+                    <div class="col-md-12 ">
+                        <div class="copyright ">
                             <p>Copyright © 2020 HCI_08. All rights reserved.</p>
                         </div>
                     </div>
@@ -255,33 +265,52 @@
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
         </div>
-
     </div>
 
     <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery-3.2.1.min.js "></script>
     <!-- Bootstrap JS-->
-    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-4.1/popper.min.js "></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js "></script>
     <!-- Vendor JS       -->
-    <script src="vendor/slick/slick.min.js">
+    <script src="vendor/slick/slick.min.js ">
     </script>
-    <script src="vendor/wow/wow.min.js"></script>
-    <script src="vendor/animsition/animsition.min.js"></script>
-    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="vendor/wow/wow.min.js "></script>
+    <script src="vendor/animsition/animsition.min.js "></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js ">
     </script>
-    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendor/counter-up/jquery.counterup.min.js">
+    <script src="vendor/counter-up/jquery.waypoints.min.js "></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js ">
     </script>
-    <script src="vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendor/select2/select2.min.js">
+    <script src="vendor/circle-progress/circle-progress.min.js "></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js "></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js "></script>
+    <script src="vendor/select2/select2.min.js ">
     </script>
 
     <!-- Main JS-->
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js "></script>
+    <script>
+        function search() {
+            let searchText = document.getElementById("searchText").value
+            searchText = searchText.toLowerCase()
+            if (searchText.localeCompare("ủa") === 0) {
+                document.getElementById("searchResult").innerHTML = "-HSUO";
+                document.getElementById("searchPanel").style.display = "";
+            }
+            if (searchText.localeCompare("ơ") === 0) {
+                document.getElementById("searchResult").innerHTML = "-W";
+                document.getElementById("searchPanel").style.display = "";
+            }
+            if (searchText.localeCompare("uế") === 0) {
+                document.getElementById("searchResult").innerHTML = "-SUE";
+                document.getElementById("searchPanel").style.display = "";
+            }
+            if (!searchText) {
+                document.getElementById("searchPanel").style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

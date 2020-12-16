@@ -126,8 +126,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search"
-                                    placeholder="Tìm kiếm..." />
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -230,7 +229,7 @@
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Câu cần gõ</p>
 
-                                        <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học anyf qua kỳ học khác</h1>
+                                        <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -265,14 +264,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p id="demo" ></p>
+                            <p id="demo"></p>
                         </div>
 
                         <!-- keyboard -->
                         <div class="row ">
                             <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
                                 <div class="keyboard ">
-                                   
+
                                     <div class="keyboard__row ">
                                         <div class="key--double " data-key="192 ">
                                             <div>~</div>
@@ -527,7 +526,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary"><a href="luyengocau4.html" style="color: white">Bài trước</a></button>
-                        <button type="button" class="btn btn-secondary" ><a href="luyengocau5.html" style="color: white">Làm lại</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="luyengocau5.html" style="color: white">Làm lại</a></button>
                     </div>
                 </div>
             </div>
@@ -569,6 +568,7 @@
             document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
             document.getElementById("demo").style.color = "blue";
         }
+
         function hide() {
             document.getElementById("demo").innerHTML = "";
         }
@@ -580,7 +580,7 @@
 
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học anyf qua kỳ học khác"){
+            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác") {
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {
@@ -588,9 +588,10 @@
                 document.getElementById("demo").style.color = "red";
             }
         }
-        function checkSentance2(){
+
+        function checkSentance2() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học anyf qua kỳ học khác"){
+            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác") {
                 document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "blue";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";

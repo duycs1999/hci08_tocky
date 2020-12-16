@@ -322,7 +322,7 @@ section {
 
 @media (max-width: 991px) {
     .main-content {
-        padding-top: 50px;
+        padding-top: 15px;
 	padding-bottom: 100px;
     }
 }
@@ -1152,7 +1152,7 @@ section {
 }
 
 .card {
-    margin-bottom: 30px;
+    margin-bottom: -10px;
 }
 
 .input-group-addon {

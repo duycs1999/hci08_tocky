@@ -264,8 +264,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row ">
-                            <p id="demo " style="color: red; "></p>
+                        <div class="row">
+                            <p id="demo" style="color: red; "></p>
                         </div>
 
                         <!-- keyboard -->
@@ -598,7 +598,7 @@
     <script src="../vendor/animsition/animsition.min.js"></script>
     <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
     </script>
-    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="../vendor/counter-up/jquery.waypoints.min.js"></script>
     <script src="../vendor/counter-up/jquery.counterup.min.js">
     </script>
     <script src="../vendor/circle-progress/circle-progress.min.js"></script>
@@ -606,8 +606,6 @@
     <script src="../vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="../vendor/select2/select2.min.js">
     </script>
-
-    <!-- Main JS-->
     <script src="../js/main.js"></script>
     <script src="../js/keyboard.js"></script>
     <script src="../js/keyboard2.js"></script>
@@ -639,13 +637,15 @@
 
         function check() {
             let e = document.getElementById("start").value
+            console.log("e========",e);
             e = e.toLowerCase()
             if (e.localeCompare("adgjc") != 0) {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 startStop()
             } else {
-                reset()
                 $('#smallmodal').modal('show')
+                reset()
+                
             }
         }
     </script>

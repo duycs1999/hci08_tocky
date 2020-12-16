@@ -13,25 +13,25 @@
     <title>Bộ quy tắc gõ</title>
 
     <!-- Fontfaces CSS-->
-    <link href="../css/font-face.css" rel="stylesheet" media="all">
-    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="../vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="../vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="../css/theme.css" rel="stylesheet" media="all">
+    <link href="css/theme.css" rel="stylesheet" media="all">
 
 </head>
 
@@ -41,22 +41,22 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="index.html">
-                    <img class="svg imgsvg" src="../images/icon/logo.svg" alt="hci08" />
+                    <img class="svg imgsvg" src="images/icon/logo.svg" alt="hci08" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a href="../index.html">
+                            <a href="index.html">
                                 <i class="fas fa-home"></i>Trang chủ</a>
                         </li>
-                        <li class="active has-sub">
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li class='active'>
-                                    <a href="../quytacgo.html">Bộ quy tắc gõ</a>
+                                    <a href="quytacgo.html">Bộ quy tắc gõ</a>
                                 </li>
                                 <li href="#">
                                     <a class="js-arrow" href="#"> Học gõ âm tiết</a>
@@ -77,12 +77,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-list"></i>Luyện tập</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Luyện gõ từ</a>
+                                    <a href="luyengotu-baihoc.html">Luyện gõ từ</a>
                                 </li>
                                 <li>
                                     <a href="index.html">Luyện gõ câu</a>
@@ -177,7 +177,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="../images/icon/avatar.svg" />
+                                            <img src="images/icon/avatar.svg" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">Đỗ Nam Trung</a>
@@ -224,12 +224,12 @@
                                 <div class="card" style="margin-left: auto;
                             margin-right: auto;">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Bài số 1</strong>
+                                        <strong class="card-title mb-3">Bài số 4</strong>
                                     </div>
                                     <div class="card-body">
-                                        <p style="font-size: 15px;">Từ cần gõ</p></br>
+                                        <p class="text-muted m-b-15">Từ cần gõ</p>
 
-                                        <h3>THÚ</h3>
+                                        <h1>TẮT</h1>
                                         <input id="start" onclick="checkChangeText()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -264,58 +264,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <p id="demo" style="color: red; "></p>
+                        <div class="row ">
+                            <p id="demo " style="color: red; "></p>
                         </div>
 
                         <!-- keyboard -->
                         <div class="row ">
                             <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
                                 <div class="keyboard ">
-                                    <div class="keyboard__row keyboard__row--h1 ">
-                                        <div data-key="27 " class="key--word ">
-                                            <span>esc</span>
-                                        </div>
-                                        <div data-key="112 " class="key--fn ">
-                                            <span>F1</span>
-                                        </div>
-                                        <div data-key="113 " class="key--fn ">
-                                            <span>F2</span>
-                                        </div>
-                                        <div data-key="114 " class="key--fn ">
-                                            <span>F3</span>
-                                        </div>
-                                        <div data-key="115 " class="key--fn ">
-                                            <span>F4</span>
-                                        </div>
-                                        <div data-key="116 " class="key--fn ">
-                                            <span>F5</span>
-                                        </div>
-                                        <div data-key="117 " class="key--fn ">
-                                            <span>F6</span>
-                                        </div>
-                                        <div data-key="118 " class="key--fn ">
-                                            <span>F7</span>
-                                        </div>
-                                        <div data-key="119 " class="key--fn ">
-                                            <span>F8</span>
-                                        </div>
-                                        <div data-key="120 " class="key--fn ">
-                                            <span>F9</span>
-                                        </div>
-                                        <div data-key="121 " class="key--fn ">
-                                            <span>F10</span>
-                                        </div>
-                                        <div data-key="122 " class="key--fn ">
-                                            <span>F11</span>
-                                        </div>
-                                        <div data-key="123 " class="key--fn ">
-                                            <span>F12</span>
-                                        </div>
-                                        <div data-key="n/a " class="key--word ">
-                                            <span>pwr</span>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="keyboard__row ">
                                         <div class="key--double " data-key="192 ">
                                             <div>~</div>
@@ -587,31 +544,33 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="../vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
-    <script src="../vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="../vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <!-- Vendor JS       -->
-    <script src="../vendor/slick/slick.min.js">
+    <script src="vendor/slick/slick.min.js">
     </script>
-    <script src="../vendor/wow/wow.min.js"></script>
-    <script src="../vendor/animsition/animsition.min.js"></script>
-    <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
     </script>
-    <script src="../vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="../vendor/counter-up/jquery.counterup.min.js">
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
     </script>
-    <script src="../vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="../vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="../vendor/select2/select2.min.js">
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
     </script>
-    <script src="../js/main.js"></script>
-    <script src="../js/keyboard.js"></script>
-    <script src="../js/keyboard2.js"></script>
-    <script src="../js/stopwatch.js">
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/keyboard2.js"></script>
+    <script src="js/stopwatch.js">
     </script>
-    <link rel="stylesheet" href="../css/keyboard.css">
+    <link rel="stylesheet" href="./css/keyboard.css">
     <script>
         function show() {
             document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
@@ -637,15 +596,13 @@
 
         function check() {
             let e = document.getElementById("start").value
-            console.log("e========",e);
             e = e.toLowerCase()
             if (e.localeCompare("adgjc") != 0) {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 startStop()
             } else {
-                $('#smallmodal').modal('show')
                 reset()
-                
+                $('#smallmodal').modal('show')
             }
         }
     </script>

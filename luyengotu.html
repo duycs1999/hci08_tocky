@@ -214,9 +214,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Luyện gõ từ
-
-                                    </h2>
+                                    <h2 class="title-1">Luyện gõ từ</h2>
                                 </div>
                             </div>
                         </div>
@@ -226,27 +224,21 @@
                                 <div class="card" style="margin-left: auto;
                             margin-right: auto;">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Bài số 5</strong>
+                                        <strong class="card-title mb-3">Bài số 1</strong>
                                     </div>
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Từ cần gõ</p>
 
-                                        <h1 id="tu">HÒA</h1>
-                                        <input id="answer" onchange="check()" type="text" class="form-control"
-                                        aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <h1>THÚ</h1>
+                                        <input id="start" onclick="checkChangeText()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" >Kết thúc</button></div>
-                                
+                                        justify-content: center;"><button class="btn btn-success" onclick="check()">Kết
+                                                thúc</button></div>
                                     </div>
-                                   
                                 </div>
-                                <div class="row">
-                                <p id="demo" style="color: red;"></p>
                             </div>
-                            </div>
-                            
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
@@ -265,18 +257,16 @@
                                         <div class="col-md-2" style="margin-left: 25px;">
                                             <button style="width: 245%;" class="btn btn-danger" onclick="reset( )" id="star t">Đặt
                                                 lại</button>
-                                                <div class="row ">
-                                                    <p id="demo " style="color: red; "></p>
-                                                </div>
 
                                         </div>
-                                       
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row ">
+                            <p id="demo " style="color: red; "></p>
+                        </div>
 
                         <!-- keyboard -->
                         <div class="row ">
@@ -510,7 +500,9 @@
 
                         </div>
                         <br><br>
-                        
+                        <div class="row">
+
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -522,6 +514,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
@@ -532,17 +526,16 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Chúc mừng bạn đã hoàn thành</p><p>luyện tập</p>
+                        <p>
+                            Bạn đã gõ đúng, chúc mừng bạn, mời bạn làm bài tiếp theo
+                        </p>
                     </div>
                     <div class="modal-footer">
-                        <a href="luyengotu-baihoc.html"><button class="btn btn-secondary">Quay lại</button></a>
-                        
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Làm lại</button>
+                        <button type="button" class="btn btn-primary">Bài khác</button>
                     </div>
                 </div>
             </div>
-
-       
-            
         </div>
         <!-- END MAIN CONTENT-->
         <!-- END PAGE CONTAINER-->
@@ -580,29 +573,37 @@
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
         function show() {
-            document.getElementById("demo").innerHTML = "Ký tự cần nhập: H-H U";
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
         }
 
         function hide() {
             document.getElementById("demo").innerHTML = "";
         }
 
-       
-        function check() {
-            let e = document.getElementById("answer").value;
-            console.log("ky tu vua go: ", e);
-            e = e.toUpperCase()
-            if (e === "HÒA"){
-                document.getElementById("tu").innerHTML = "TOANG";
-                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
-                document.getElementById("demo").style.color = "blue";
-                document.getElementById("answer").value="";
-            } else {
-                document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
-                document.getElementById("demo").style.color = "red";
-                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
+        function onChangeText() {
+            let e = document.getElementById("start").value
+            console.log("length=====",
+                e);
+            if (e) {
+                this.startStop()
             }
-            console.log(e);
+        }
+
+        function startCount() {
+            this.reset()
+            this.startStop()
+        }
+
+        function check() {
+            let e = document.getElementById("start").value
+            e = e.toLowerCase()
+            if (e.localeCompare("adgjc") != 0) {
+                document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                startStop()
+            } else {
+                reset()
+                $('#smallmodal').modal('show')
+            }
         }
     </script>
 </body>

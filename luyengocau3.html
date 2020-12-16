@@ -212,191 +212,169 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <!-- <div class="row">
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h2 class="title-1">Luyện gõ câu</h2>
                                 </div>
                             </div>
                         </div>
-                        <br> -->
+                        <br>
                         <div class="row">
-                            <div class="card col-md-6" style="margin-left: auto;
+                            <div class="col-md-8">
+                                <div class="card" style="margin-left: auto;
                             margin-right: auto;">
-                                <div class="card-header">
-                                    <strong>Luyện gõ câu - Bài số 3</strong>
-                                </div>
-                                <div class="card-body">
-                                    <p style="font-size: 15px;">Từ cần gõ</p></br>
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Bài số 3</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-muted m-b-15">Câu cần gõ</p>
 
-                                    <h3>Không có gì quý hơn độc lập tự do</h3>
-                                    <input id="answerSentence" onchange="checkSentance();" type="text" class="form-control"
-                                        aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:" value="">
+                                        <h1>Không có gì quý hơn độc lập tự do</h1>
+                                        <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance();">Submit</button></div>
+                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2();">Kiểm tra</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Đếm giờ</strong>
+                                    </div>
+                                    <h1>
+                                        <span id="min">00</span> :
+                                        <span id="sec">00</span> :
+                                        <span id="milisec">00</span>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-md-2" style="margin-left: 90px">
+                                            <button class="btn btn-primary" onclick="startStop()" id="start">Bắt đầu</button>
+
+                                        </div>
+                                        <div class="col-md-2" style="margin-left: 25px;">
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="start">Đặt
+                                                lại</button>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <p id="demo" style="color: red;"></p>
-                            <p id="demo1" style="color: blue;"></p>
+                            <p id="demo" ></p>
                         </div>
 
                         <!-- keyboard -->
-                        <div class="row">
-                            <div class="col-md-6" style="transform: scale(1.5,1.5);
-                            margin-left: 160px;
-                            margin-right: -160px;
-                            margin-top: 50px;">
-                                <div class="keyboard">
-                                    <div class="keyboard__row keyboard__row--h1">
-                                        <div data-key="27" class="key--word">
-                                            <span>esc</span>
-                                        </div>
-                                        <div data-key="112" class="key--fn">
-                                            <span>F1</span>
-                                        </div>
-                                        <div data-key="113" class="key--fn">
-                                            <span>F2</span>
-                                        </div>
-                                        <div data-key="114" class="key--fn">
-                                            <span>F3</span>
-                                        </div>
-                                        <div data-key="115" class="key--fn">
-                                            <span>F4</span>
-                                        </div>
-                                        <div data-key="116" class="key--fn">
-                                            <span>F5</span>
-                                        </div>
-                                        <div data-key="117" class="key--fn">
-                                            <span>F6</span>
-                                        </div>
-                                        <div data-key="118" class="key--fn">
-                                            <span>F7</span>
-                                        </div>
-                                        <div data-key="119" class="key--fn">
-                                            <span>F8</span>
-                                        </div>
-                                        <div data-key="120" class="key--fn">
-                                            <span>F9</span>
-                                        </div>
-                                        <div data-key="121" class="key--fn">
-                                            <span>F10</span>
-                                        </div>
-                                        <div data-key="122" class="key--fn">
-                                            <span>F11</span>
-                                        </div>
-                                        <div data-key="123" class="key--fn">
-                                            <span>F12</span>
-                                        </div>
-                                        <div data-key="n/a" class="key--word">
-                                            <span>pwr</span>
-                                        </div>
-                                    </div>
-                                    <div class="keyboard__row">
-                                        <div class="key--double" data-key="192">
+                        <div class="row ">
+                            <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
+                                <div class="keyboard ">
+                                   
+                                    <div class="keyboard__row ">
+                                        <div class="key--double " data-key="192 ">
                                             <div>~</div>
                                             <div>`</div>
                                         </div>
-                                        <div class="key--double" data-key="49">
+                                        <div class="key--double " data-key="49 ">
                                             <div>!</div>
                                             <div>1</div>
                                         </div>
-                                        <div class="key--double" data-key="50">
+                                        <div class="key--double " data-key="50 ">
                                             <div>@</div>
                                             <div>2</div>
                                         </div>
-                                        <div class="key--double" data-key="51">
+                                        <div class="key--double " data-key="51 ">
                                             <div>#</div>
                                             <div>3</div>
                                         </div>
-                                        <div class="key--double" data-key="52">
+                                        <div class="key--double " data-key="52 ">
                                             <div>$</div>
                                             <div>4</div>
                                         </div>
-                                        <div class="key--double" data-key="53">
+                                        <div class="key--double " data-key="53 ">
                                             <div>%</div>
                                             <div>5</div>
                                         </div>
-                                        <div class="key--double" data-key="54">
+                                        <div class="key--double " data-key="54 ">
                                             <div>^</div>
                                             <div>6</div>
                                         </div>
-                                        <div class="key--double" data-key="55">
+                                        <div class="key--double " data-key="55 ">
                                             <div>&</div>
                                             <div>7</div>
                                         </div>
-                                        <div class="key--double" data-key="56">
+                                        <div class="key--double " data-key="56 ">
                                             <div>*</div>
                                             <div>8</div>
                                         </div>
-                                        <div class="key--double" data-key="57">
+                                        <div class="key--double " data-key="57 ">
                                             <div>(</div>
                                             <div>9</div>
                                         </div>
-                                        <div class="key--double" data-key="48">
+                                        <div class="key--double " data-key="48 ">
                                             <div>)</div>
                                             <div>0</div>
                                         </div>
-                                        <div class="key--double" data-key="189">
+                                        <div class="key--double " data-key="189 ">
                                             <div>_</div>
                                             <div>-</div>
                                         </div>
-                                        <div class="key--double" data-key="187">
+                                        <div class="key--double " data-key="187 ">
                                             <div>+</div>
                                             <div>=</div>
                                         </div>
-                                        <div class="key--bottom-right key--word key--w4" data-key="8">
+                                        <div class="key--bottom-right key--word key--w4 " data-key="8 ">
                                             <span>delete</span>
                                         </div>
                                     </div>
-                                    <div class="keyboard__row">
-                                        <div class="key--bottom-left key--word key--w4" data-key="9">
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w4 " data-key="9 ">
                                             <span>tab</span>
                                         </div>
-                                        <div class="key--letter" data-char="Q">Q</div>
-                                        <div class="key--letter" data-char="W">W</div>
-                                        <div class="key--letter" data-char="E">E</div>
-                                        <div class="key--letter" data-char="R">R</div>
-                                        <div class="key--letter" data-char="T">T</div>
-                                        <div class="key--letter" data-char="Y">Y</div>
-                                        <div class="key--letter" data-char="U">U</div>
-                                        <div class="key--letter" data-char="I">I</div>
-                                        <div class="key--letter" data-char="O">O</div>
-                                        <div class="key--letter" data-char="P">P</div>
-                                        <div class="key--double" data-key="219" data-char="{[">
+                                        <div class="key--letter " data-char="Q ">Q</div>
+                                        <div class="key--letter " data-char="W ">W</div>
+                                        <div class="key--letter " data-char="E ">E</div>
+                                        <div class="key--letter " data-char="R ">R</div>
+                                        <div class="key--letter " data-char="T ">T</div>
+                                        <div class="key--letter " data-char="Y ">Y</div>
+                                        <div class="key--letter " data-char="U ">U</div>
+                                        <div class="key--letter " data-char="I ">I</div>
+                                        <div class="key--letter " data-char="O ">O</div>
+                                        <div class="key--letter " data-char="P ">P</div>
+                                        <div class="key--double " data-key="219 " data-char="{[ ">
                                             <div>{</div>
                                             <div>[</div>
                                         </div>
-                                        <div class="key--double" data-key="221" data-char="}]">
+                                        <div class="key--double " data-key="221 " data-char="}] ">
                                             <div>}</div>
                                             <div>]</div>
                                         </div>
-                                        <div class="key--double" data-key="220" data-char="|\">
+                                        <div class="key--double " data-key="220 " data-char="|\ ">
                                             <div>|</div>
                                             <div>\</div>
                                         </div>
                                     </div>
-                                    <div class="keyboard__row">
-                                        <div class="key--bottom-left key--word key--w5" data-key="20">
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w5 " data-key="20 ">
                                             <span>caps lock</span>
                                         </div>
-                                        <div class="key--letter" data-char="A">A</div>
-                                        <div class="key--letter" data-char="S">S</div>
-                                        <div class="key--letter" data-char="D">D</div>
-                                        <div class="key--letter" data-char="F">F</div>
-                                        <div class="key--letter" data-char="G">G</div>
-                                        <div class="key--letter" data-char="H">H</div>
-                                        <div class="key--letter" data-char="J">J</div>
-                                        <div class="key--letter" data-char="K">K</div>
-                                        <div class="key--letter" data-char="L">L</div>
-                                        <div class="key--double" data-key="186">
+                                        <div class="key--letter " data-char="A ">A</div>
+                                        <div class="key--letter " data-char="S ">S</div>
+                                        <div class="key--letter " data-char="D ">D</div>
+                                        <div class="key--letter " data-char="F ">F</div>
+                                        <div class="key--letter " data-char="G ">G</div>
+                                        <div class="key--letter " data-char="H ">H</div>
+                                        <div class="key--letter " data-char="J ">J</div>
+                                        <div class="key--letter " data-char="K ">K</div>
+                                        <div class="key--letter " data-char="L ">L</div>
+                                        <div class="key--double " data-key="186 ">
                                             <div>:</div>
                                             <div>;</div>
                                         </div>
-                                        <div class="key--double" data-key="222">
+                                        <div class="key--double " data-key="222 ">
                                             <div>"</div>
                                             <div>'</div>
                                         </div>
@@ -509,19 +487,17 @@
                                         <div class="key--letter" data-char-steno="M">A</div>
                                     </div>
                                 </div>
+                                <br>
+                                <div style="margin-left: 180px;">
+                                    <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Bật gợi ý
+                                    </button>
+                                    <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Tắt gợi ý
+                                    </button>
+                                </div>
                             </div>
 
-                        </div>
-                        <br><br>
-                        <div class="row">
-                            <div style="margin-left: 60px;">
-                                <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Bật gợi ý
-                                </button>
-                                <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Tắt gợi ý
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -535,7 +511,6 @@
             </div>
         </div>
 
-
         <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
@@ -545,36 +520,15 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <p>
-                            Bạn đã gõ đúng, chúc mừng bạn, mời bạn làm bài tiếp theo
-                        </p>
+                    <div class="modal-body" id="textSmallModal">
+                        <!-- <p>
+                            Bạn đã gõ sai, bạn nên làm lại bài này
+                        </p> -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" ><a href="luyengocau.html" style="color: white">Bài trước</a></button>
-                        <button type="button" class="btn btn-secondary" ><a href="luyengocau2.html" style="color: white">Làm lại</a></button>
-                        <button type="button" class="btn btn-primary"><a href="luyengocau3.html" style="color: white">Bài khác</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="smallmodalFalse" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Bạn đã sai, bạn nên làm lại bài này
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Làm lại</button>
-                        <button type="button" class="btn btn-primary"><a href=""></a>Bài khác</button>
+                        <button type="button" class="btn btn-primary"><a href="luyengocau2.html" style="color: white">Bài trước</a></button>
+                        <button type="button" class="btn btn-secondary" ><a href="luyengocau3.html" style="color: white">Làm lại</a></button>
+                        <button type="button" class="btn btn-primary"><a href="luyengocau4.html" style="color: white">Bài khác</a></button>
                     </div>
                 </div>
             </div>
@@ -614,24 +568,42 @@
     <script>
         function show() {
             document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
+            document.getElementById("demo").style.color = "blue";
         }
         function hide() {
             document.getElementById("demo").innerHTML = "";
         }
+
+        function startCount() {
+            this.reset()
+            this.startStop()
+        }
+
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            console.log("ky tu vua go: ", e);
             if (e === "Không có gì quý hơn độc lập tự do"){
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 document.getElementById("demo").style.color = "red";
+            }
+        }
+        function checkSentance2(){
+            let e = document.getElementById("answerSentence").value;
+            if (e === "Không có gì quý hơn độc lập tự do"){
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+            } else {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "red";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
-            console.log(e);
+            startStop()
         }
+    </script>
+    <script src="js/stopwatch.js">
     </script>
 </body>
 

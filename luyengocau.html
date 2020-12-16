@@ -231,12 +231,11 @@
                                         <p class="text-muted m-b-15">Câu cần gõ</p>
 
                                         <h1>Lan đi học</h1>
-                                        <input id="start" onclick="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button class="btn btn-success" onclick="checkSentance()">Kết
-                                                thúc</button></div>
+                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2();">Kiểm tra</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -251,12 +250,12 @@
                                         <span id="milisec">00</span>
                                     </h1>
                                     <div class="row">
-                                        <div class="col-md-2" style="margin-left: 90px">
-                                            <button class="btn btn-primary" onclick="startStop()" id="start">Bắt đầu</button>
+                                        <div class="col-md-2" style="margin-left: 60px">
+                                            <button class="btn btn-primary" onclick="click()" id="start">Bắt đầu</button>
 
                                         </div>
                                         <div class="col-md-2" style="margin-left: 25px;">
-                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset( )" id="star t">Đặt
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="start">Đặt
                                                 lại</button>
 
                                         </div>
@@ -266,7 +265,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p id="demo"></p>
+                            <p id="demo" ></p>
                         </div>
 
                         <!-- keyboard -->
@@ -566,6 +565,7 @@
     <script src="js/keyboard2.js"></script>
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
+        let flag = false;
         function show() {
             document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
             document.getElementById("demo").style.color = "blue";
@@ -573,21 +573,45 @@
         function hide() {
             document.getElementById("demo").innerHTML = "";
         }
+
+        function startCount() {
+            this.reset()
+            this.startStop()
+        }
+        function click(){
+            startStop()
+            flag = true;
+            console.log("falgggg", flag);
+        }
+
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            console.log("ky tu vua go: ", e);
-            e = e.toUpperCase()
-            if (e === "LAN ĐI HỌC"){
+            if (e === "Lan đi học"){
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 document.getElementById("demo").style.color = "red";
+            }
+        }
+        function checkSentance2(){
+            let e = document.getElementById("answerSentence").value;
+            if (e === "Lan đi học"){
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+            } else {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "red";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
-            console.log(e);
+            console.log("flag",flag);
+            if (flag) {
+                startStop()
+            }
         }
+    </script>
+    <script src="js/stopwatch.js">
     </script>
 </body>
 

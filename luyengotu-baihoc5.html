@@ -70,9 +70,7 @@
                                         <li>
                                             <a href="">- Âm tiết cuối</a>
                                         </li>
-                                        <li>
-                                            <a href="">- Âm tiết hỗn hợp</a>
-                                        </li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -232,21 +230,20 @@
                                         <p class="text-muted m-b-15">Từ cần gõ</p>
 
                                         <h1 id="tu">HÒA</h1>
-                                        <input id="answer" onchange="check()" type="text" class="form-control"
-                                        aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <input id="answer" onchange="check()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" >Kết thúc</button></div>
-                                
+                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success">Kết thúc</button></div>
+
                                     </div>
-                                   
+
                                 </div>
                                 <div class="row">
-                                <p id="demo" style="color: red;"></p>
+                                    <p id="demo" style="color: red;"></p>
+                                </div>
                             </div>
-                            </div>
-                            
+
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
@@ -265,24 +262,24 @@
                                         <div class="col-md-2" style="margin-left: 25px;">
                                             <button style="width: 245%;" class="btn btn-danger" onclick="reset( )" id="star t">Đặt
                                                 lại</button>
-                                                <div class="row ">
-                                                    <p id="demo " style="color: red; "></p>
-                                                </div>
+                                            <div class="row ">
+                                                <p id="demo " style="color: red; "></p>
+                                            </div>
 
                                         </div>
-                                       
+
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <!-- keyboard -->
                         <div class="row ">
                             <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
                                 <div class="keyboard ">
-                                   
+
                                     <div class="keyboard__row ">
                                         <div class="key--double " data-key="192 ">
                                             <div>~</div>
@@ -510,7 +507,7 @@
 
                         </div>
                         <br><br>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -532,17 +529,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Chúc mừng bạn đã hoàn thành</p><p>luyện tập</p>
+                        <p>Chúc mừng bạn đã hoàn thành</p>
+                        <p>luyện tập</p>
                     </div>
                     <div class="modal-footer">
                         <a href="luyengotu-baihoc.html"><button class="btn btn-secondary">Quay lại</button></a>
-                        
+
                     </div>
                 </div>
             </div>
 
-       
-            
+
+
         </div>
         <!-- END MAIN CONTENT-->
         <!-- END PAGE CONTAINER-->
@@ -587,16 +585,16 @@
             document.getElementById("demo").innerHTML = "";
         }
 
-       
+
         function check() {
             let e = document.getElementById("answer").value;
             console.log("ky tu vua go: ", e);
             e = e.toUpperCase()
-            if (e === "HÒA"){
+            if (e === "HÒA") {
                 document.getElementById("tu").innerHTML = "TOANG";
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("answer").value="";
+                document.getElementById("answer").value = "";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 document.getElementById("demo").style.color = "red";

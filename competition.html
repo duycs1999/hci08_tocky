@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Bộ quy tắc gõ</title>
+    <title>Tocky.vn - Nền tảng luyện gõ nhanh và chính xác</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -51,7 +51,7 @@
                             <a href="index.html">
                                 <i class="fas fa-home"></i>Trang chủ</a>
                         </li>
-                        <li class="active has-sub">
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -100,7 +100,7 @@
                             <a href="index.html">
                                 <i class="fas fa-gamepad"></i>Trò chơi</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="challenge.html">
                                 <i class="fas fa-group"></i>Thi đấu</a>
                         </li>
@@ -231,17 +231,17 @@
                                             <label>Bạn</label>
                                         </div>
                                         <div class="card-header ">
-                                            <input type="range" id="volume" name="volume" min="0" max="11">
+                                            <input type="range" id="volume" name="volume" min="0" max="11" step="1" value="0">
                                         </div>
                                         <div class="card-header">
                                             <img src="images/avt4.jpg" width="40px" />
-                                            <label>Đối thủ</label>
+                                            <label>Le Chi Cuong</label>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Nội dung</p>
                             
-                                        <h1>Lan đi học</h1>
+                                        <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học anyf qua kỳ học khác</h1>
                             
                                         <input id="answerSentence" onkeydown="checkKey()" type="text" class="form-control" aria-required="true"
                                             aria-invalid="false" placeholder="Gõ vào đây:">
@@ -267,7 +267,7 @@
                                             <button class="btn btn-primary" onclick="run()" id="start">Start</button>
                                         </div>
                                         <div class="col-md-2" style="margin-left: 25px;">
-                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="star t">Stop</button>
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="block()" id="star t">Stop</button>
 
                                         </div>
                                     </div>
@@ -589,15 +589,20 @@
             this.reset()
             this.startStop()
         }
-        function click(){
-            startStop()
-            flag = true;
-            console.log("falgggg", flag);
+        function block(){
+            document.getElementById("min").innerHTML =  00;
+            document.getElementById("sec").innerHTML =  00;
         }
 
         function checkKey() {
-            let e = document.getElementById("answerSentence");
-            console.log(e);
+            document.body.addEventListener('keydown', function(e) {
+            var key = getKeySteno(e);
+            if (e.keyCode === 32){
+                document.getElementById("volume").value = 6;
+            } else {
+                document.getElementById("volume").value = 5;
+            }
+});
             
         }
         function checkSentance2(){

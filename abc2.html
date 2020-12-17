@@ -36,7 +36,66 @@
     <link href="css/keyboard.css" rel="stylesheet" media="all">
 
 </head>
+<style>
+    #word {
+        position: absolute;
+        height: 170px;
+    }
+</style>
+<style>
+    .score2 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        left: 130px;
+        top: 120px;
+    }
 
+    .text2 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        height: 100px;
+        width: 260px;
+        left: 70px;
+        bottom: 50px;
+        text-align: center;
+    }
+
+    .level {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 50px;
+        left: 100px;
+    }
+
+    #row1 {
+        display: block;
+        text-align: center;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        color: black;
+        overflow: hidden;
+        background: white;
+        border: 1px;
+        height: 85px;
+        width: 600px;
+        left: 480px;
+        top: 30px
+    }
+
+    .highlight {
+        background: #dddddd;
+        padding: 3px 5px;
+    }
+
+    .dongho {
+        position: absolute;
+        left: 150px;
+        top: 210px;
+    }
+</style>
 <body class="animsition">
     <div class="page-wrapper">
 
@@ -237,24 +296,24 @@
                                     var slider = document.getElementById("words" + i);
                                     slider.setAttribute("class", "highlight");
                                     var tmp = 0;
-                                    for (u = 0; u < 30; u++) {
+                                    for (u = 0; u < 19; u++) {
                                         if (document.getElementById("words" + u).getAttribute("class").toString() != "highlight") {
                                             tmp++;
                                             break;
                                         }
                                     }
-                                    document.getElementById("score").innerText = "Điểm: " + Math.floor(new Date().getTime() % 1000000)
                                     if (tmp == 0) {
                                         //tất cả đều đã highlight
                                         alert("Chúc mừng bạn đã giành chiến thắng !!")
                                     }
                                 }
                             </script>
-                            <textarea type="text" class="text2" autofocus onkeyup="changeImage(Math.floor(Math.random() * 30))"></textarea>
+
                             <h2 id="demo" class="score2"></h2>
                             <h2 id="score" class="level">
                                 Điểm: 0
                             </h2>
+
                             <div id="row1">
                                 <span id="words0" class="highlight">phủ</span>
                                 <span id="words1" class="">khánh</span>
@@ -275,75 +334,16 @@
                                 <span id="words16" class="">tích</span>
                                 <span id="words17" class="">khỏe</span>
                                 <span id="words18" class="">mạnh</span>
-                                <span id="words19" class="">phần</span>
-                                <span id="words20" class="">làm</span>
-                                <span id="words21" class="">giấy</span>
-                                <span id="words22" class="">tờ</span>
-                                <span id="words23" class="">trường</span>
-                                <span id="words24" class="">học</span>
-                                <span id="words25" class="">vì</span>
-                                <span id="words26" class="">xinh</span>
-                                <span id="words27" class="">đẹp</span>
-                                <span id="words28" class="">phải</span>
-                                <span id="words29" class="">gì</span>
-                                <span id="words30" class="">không</span>
                             </div>
-                            <img src="images/icon/c1.PNG" alt="Chạy đua nước rút">
-                            <style>
-                                .score2 {
-                                    position: absolute;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    color: blue;
-                                    left: 130px;
-                                    top: 120px;
-                                }
-                                
-                                .text2 {
-                                    position: absolute;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 30px;
-                                    height: 100px;
-                                    width: 260px;
-                                    left: 70px;
-                                    bottom: 50px;
-                                    text-align: center;
-                                }
-                                
-                                .level {
-                                    position: absolute;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    top: 50px;
-                                    left: 100px;
-                                }
-                                
-                                #row1 {
-                                    display: block;
-                                    text-align: center;
-                                    position: absolute;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 25px;
-                                    color: black;
-                                    overflow: hidden;
-                                    background: white;
-                                    border: 1px;
-                                    height: 85px;
-                                    width: 600px;
-                                    left: 480px;
-                                    top: 30px
-                                }
-                                
-                                .highlight {
-                                    background: #dddddd;
-                                    padding: 3px 5px;
-                                }
-                                
-                                .dongho {
-                                    position: absolute;
-                                    left: 150px;
-                                    top: 210px;
-                                }
-                            </style>
+                            <br><br><br><br>
+
+                            <img style=" display: block; margin-left: auto; margin-right: auto; " height="220" width=220" src="images/icon/giphy.gif" alt="Chạy đua nước rút">
+                            <br>
+                            <input placeholder="Gõ tốc ký tại đây" size="130" style=" display: block; margin-left: auto; margin-right: auto; " type="text" onkeyup="changeImage(Math.floor(Math.random() * 25))">
+
                         </div>
+
+
                         <div class="row">
                             <div class="col-md-6" style="transform: scale(1.5,1.5);
                                             margin-left: 160px;
@@ -617,12 +617,8 @@
         </div>
 
     </div>
-    <style>
-        #word {
-            position: absolute;
-            height: 170px;
-        }
-    </style>
+<!--    <textarea type="text" class="text2" autofocus onkeyup="changeImage(Math.floor(Math.random() * 30))"></textarea>-->
+
     <!-- END PAGE CONTAINER-->
 
     </div>

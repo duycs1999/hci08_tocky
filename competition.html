@@ -243,7 +243,7 @@
                             
                                         <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học anyf qua kỳ học khác</h1>
                             
-                                        <input id="answerSentence" onkeydown="checkKey()" type="text" class="form-control" aria-required="true"
+                                        <input id="answerSentence" onkeydown="checkKey()" disabled="false" type="text" class="form-control" aria-required="true"
                                             aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <!-- <div style="  display: flex;
@@ -262,14 +262,14 @@
                                         <span id="min">00</span> :
                                         <span id="sec">00</span>
                                     </h1>
-                                    <div class="row">
-                                        <div class="col-md-2" style="margin-left: 60px">
-                                            <button class="btn btn-primary" onclick="run()" id="start">Start</button>
+                                    <div style="margin-left: auto; margin-right: auto;">
+                                        <div style="margin-left: 60px">
+                                            <button class="btn btn-primary" onclick="run()" id="start" >Start</button>
                                         </div>
-                                        <div class="col-md-2" style="margin-left: 25px;">
+                                        <!-- <div class="col-md-2" style="margin-left: 25px;">
                                             <button style="width: 245%;" class="btn btn-danger" onclick="block()" id="star t">Stop</button>
 
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                 </div>
@@ -622,6 +622,8 @@
             }
         }
         function run(){
+            document.getElementById("answerSentence").disabled = false;
+            document.getElementById("start").disabled = true;
             var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
             var countDay = new Date().getTime() + 1000*60*3 + 1000;
       

@@ -70,9 +70,7 @@
                                         <li>
                                             <a href="">- Âm tiết cuối</a>
                                         </li>
-                                        <li>
-                                            <a href="">- Âm tiết hỗn hợp</a>
-                                        </li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -227,7 +225,8 @@
                                         <strong class="card-title mb-3">Bài số 1</strong>
                                     </div>
                                     <div class="card-body">
-                                        <p style="font-size: 15px;">Từ cần gõ</p></br>
+                                        <p style="font-size: 15px;">Từ cần gõ</p>
+                                        </br>
 
                                         <h3>THÚ</h3>
                                         <input id="start" onclick="checkChangeText()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
@@ -637,7 +636,7 @@
 
         function check() {
             let e = document.getElementById("start").value
-            console.log("e========",e);
+            console.log("e========", e);
             e = e.toLowerCase()
             if (e.localeCompare("adgjc") != 0) {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
@@ -645,7 +644,7 @@
             } else {
                 $('#smallmodal').modal('show')
                 reset()
-                
+
             }
         }
     </script>

@@ -55,23 +55,20 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li class='active'>
+                                <li>
                                     <a href="quytacgo.html">Bộ quy tắc gõ</a>
                                 </li>
                                 <li href="#">
                                     <a class="js-arrow" href="#"> Học gõ âm tiết</a>
                                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                                         <li>
-                                            <a href="">- Âm tiết đầu</a>
+                                            <a href="hocGoAmDauDS.html">- Âm tiết đầu</a>
                                         </li>
                                         <li>
-                                            <a href="">- Âm chính</a>
+                                            <a href="hocGoAmChinhDS.html">- Âm chính</a>
                                         </li>
                                         <li>
-                                            <a href="">- Âm tiết cuối</a>
-                                        </li>
-                                        <li>
-                                            <a href="">- Âm tiết hỗn hợp</a>
+                                            <a href="hocGoAmCuoiDS.html">- Âm tiết cuối</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -85,7 +82,7 @@
                                     <a href="luyengotu-baihoc.html">Luyện gõ từ</a>
                                 </li>
                                 <li>
-                                    <a href="index.html">Luyện gõ câu</a>
+                                    <a href="luyengocau.html">Luyện gõ câu</a>
                                 </li>
                                 <li>
                                     <a href="index.html">Luyện gõ văn bản</a>
@@ -93,11 +90,11 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="tudien.html">
                                 <i class="fas fa-book"></i>Từ điển</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="inbox.html">
                                 <i class="fas fa-gamepad"></i>Trò chơi</a>
                         </li>
                         <li>
@@ -105,7 +102,7 @@
                                 <i class="fas fa-group"></i>Thi đấu</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="ranking.html">
                                 <i class="fas fa-signal"></i>Xếp hạng</a>
                         </li>
                         <li>
@@ -230,21 +227,20 @@
                                         <p class="text-muted m-b-15">Từ cần gõ</p>
 
                                         <h1 id="tu">CỌ</h1>
-                                        <input id="answer" onchange="check()" type="text" class="form-control"
-                                        aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <input id="answer" onchange="check()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" >Kết thúc</button></div>
-                                
+                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success">Kết thúc</button></div>
+
                                     </div>
-                                   
+
                                 </div>
                                 <div class="row">
-                                <p id="demo" style="color: red;"></p>
+                                    <p id="demo" style="color: red;"></p>
+                                </div>
                             </div>
-                            </div>
-                            
+
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
@@ -263,24 +259,24 @@
                                         <div class="col-md-2" style="margin-left: 25px;">
                                             <button style="width: 245%;" class="btn btn-danger" onclick="reset( )" id="star t">Đặt
                                                 lại</button>
-                                                <div class="row ">
-                                                    <p id="demo " style="color: red; "></p>
-                                                </div>
+                                            <div class="row ">
+                                                <p id="demo " style="color: red; "></p>
+                                            </div>
 
                                         </div>
-                                       
+
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <!-- keyboard -->
                         <div class="row ">
                             <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
                                 <div class="keyboard ">
-                                   
+
                                     <div class="keyboard__row ">
                                         <div class="key--double " data-key="192 ">
                                             <div>~</div>
@@ -508,7 +504,7 @@
 
                         </div>
                         <br><br>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -541,8 +537,8 @@
                 </div>
             </div>
 
-       
-            
+
+
         </div>
         <!-- END MAIN CONTENT-->
         <!-- END PAGE CONTAINER-->
@@ -587,16 +583,16 @@
             document.getElementById("demo").innerHTML = "";
         }
 
-       
+
         function check() {
             let e = document.getElementById("answer").value;
             console.log("ky tu vua go: ", e);
             e = e.toUpperCase()
-            if (e === "CỌ"){
+            if (e === "CỌ") {
                 document.getElementById("tu").innerHTML = "BÊ";
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("answer").value="";
+                document.getElementById("answer").value = "";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
                 document.getElementById("demo").style.color = "red";

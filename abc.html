@@ -198,15 +198,40 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div>
-                            <button><img id="slider"  src="images/icon/xepgach1.PNG" onkeyup="changeImage()"/></button>
+                        <div class="column">
+                            <input type="text" class="text1" autofocus>
+                            <h2 class="score">Điểm:
+                                <span class="">0</span>
+                            </h2>
+                            <img id="slider"  src="images/icon/g1.PNG" width="100%"onclick="changeImage()"/>
+
 
                         </div>
+                        <style>
+                            .score{
+                                position: absolute;
+                                font-family: Arial, Helvetica, sans-serif;
+                                color: blue;
+                                right: 170px;
+                                bottom: 300px;
+                            }
+                            .text1{
+                                position: absolute;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 30px;
+                                height: 100px;
+                                width: 307px;
+                                right: 70px;
+                                bottom: 60px;
+                                text-align:center;
+                            }
+
+                        </style>
                         <script>
-                            var images = ["images/icon/xepgach1.PNG",
-                                "images/icon/xepgach3.PNG",
-                                "images/icon/xepgach2.PNG",
-                                "images/icon/xepgach4.PNG"];
+                            /*var images = ["C:\\Users\\Dell N7567\\Desktop\\CoolAdmin-master\\images\\icon\\xepgach1.PNG",
+                                "C:\\Users\\Dell N7567\\Desktop\\CoolAdmin-master\\images\\icon\\xepgach3.PNG",
+                                "C:\\Users\\Dell N7567\\Desktop\\CoolAdmin-master\\images\\icon\\xepgach2.PNG",
+                                "C:\\Users\\Dell N7567\\Desktop\\CoolAdmin-master\\images\\icon\\xepgach4.PNG"];
                             var num = 0;
 
                             function changeImage() {
@@ -218,7 +243,7 @@
                                 slider.src = images[num];
                                    // document.writeln(images[num%2]);
                                     // }
-                            }
+                            }*/
 
                         </script>
 

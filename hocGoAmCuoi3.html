@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Bộ quy tắc gõ</title>
+    <title>Học gõ âm tiết- Âm tiết cuối</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -212,7 +212,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Luyện gõ câu</h2>
+                                    <h2 class="title-1">Học gõ âm cuối</h2>
                                 </div>
                             </div>
                         </div>
@@ -222,41 +222,33 @@
                                 <div class="card" style="margin-left: auto;
                             margin-right: auto;">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Bài số 2</strong>
+                                        <strong class="card-title mb-3">Level 3</strong>
                                     </div>
                                     <div class="card-body">
-                                        <p class="text-muted m-b-15">Câu cần gõ</p>
+                                        <p class="text-muted m-b-15">Âm cần gõ</p>
 
-                                        <h1>Mẹ mua áo mới cho An</h1>
+                                        <h1>ng</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
                                         align-items: center;
-                                        justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2();">Kiểm tra</button></div>
+                                        justify-content: center;">
+                                            <button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2()" id="clickme">Kiểm
+                                                tra</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Đếm giờ</strong>
+                                        <strong class="card-title mb-3">Số lần gõ</strong>
                                     </div>
+                                    <br><br>
                                     <h1>
-                                        <span id="min">00</span> :
-                                        <span id="sec">00</span> :
-                                        <span id="milisec">00</span>
+                                        <span id="countClick"></span>
                                     </h1>
-                                    <div class="row">
-                                        <div class="col-md-2" style="margin-left: 90px">
-                                            <button class="btn btn-primary" onclick="startStop()" id="start">Bắt đầu</button>
-
-                                        </div>
-                                        <div class="col-md-2" style="margin-left: 25px;">
-                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="start">Đặt
-                                                lại</button>
-
-                                        </div>
-                                    </div>
+                                    <br><br>
 
                                 </div>
                             </div>
@@ -497,6 +489,7 @@
 
                         </div>
                     </div>
+                    <br><br><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
@@ -518,14 +511,13 @@
                         </button>
                     </div>
                     <div class="modal-body" id="textSmallModal">
-                        <!-- <p>
-                            Bạn đã gõ sai, bạn nên làm lại bài này
-                        </p> -->
+                        <p id="modalContent"></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"><a href="luyengocau.html" style="color: white">Bài trước</a></button>
-                        <button type="button" class="btn btn-secondary"><a href="luyengocau2.html" style="color: white">Làm lại</a></button>
-                        <button type="button" class="btn btn-primary"><a href="luyengocau3.html" style="color: white">Bài khác</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="hocGoAmCuoi.html"
+                                style="color: white">Làm lại</a></button>
+                        <button type="button" class="btn btn-primary"><a href="hocGoAmCuoi2.html"
+                                style="color: white">Bài khác</a></button>
                     </div>
                 </div>
             </div>
@@ -563,9 +555,17 @@
     <script src="js/keyboard2.js"></script>
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
+        var button = document.getElementById("clickme"),
+            count = 0;
+        button.onclick = function() {
+            count += 1
+            document.getElementById("countClick").innerHTML = count + " lần";
+        }
+        let flag = false;
+
         function show() {
-            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
-            document.getElementById("demo").style.color = "blue";
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: -G";
+            document.getElementById("demo").style.color = "red";
         }
 
         function hide() {
@@ -577,29 +577,40 @@
             this.startStop()
         }
 
+        function click() {
+            startStop()
+            flag = true;
+            console.log("falgggg", flag);
+        }
+
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Mẹ mua áo mới cho An") {
-                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+            if (e === "ng") {
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện âm tiếp theo!";
+                document.getElementById("modalContent").innerHTML = "Bạn nhập đúng, luyện âm tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
+                document.getElementById("modalContent").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
+
                 document.getElementById("demo").style.color = "red";
             }
         }
 
         function checkSentance2() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Mẹ mua áo mới cho An") {
-                document.getElementById("demo").innerHTML = "";
+            if (e === "ng") {
+
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện âm tiếp theo!";
             } else {
-                document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "red";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
-            // startStop()
+            console.log("flag", flag);
+            if (flag) {
+                startStop()
+            }
         }
     </script>
     <script src="js/stopwatch.js">
@@ -607,4 +618,3 @@
 </body>
 
 </html>
-<!-- end document-->

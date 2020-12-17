@@ -70,7 +70,6 @@
                                         <li>
                                             <a href="">- Âm tiết cuối</a>
                                         </li>
-
                                     </ul>
                                 </li>
                             </ul>
@@ -126,8 +125,8 @@
                             <form class="form-header" action="" method="POST">
                                 <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
                                 <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
                             </form>
                             <div class="header-button">
                                 <div class="noti-wrap">
@@ -212,7 +211,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Luyện gõ câu</h2>
+                                    <h2 class="title-1">Học gõ âm chính</h2>
                                 </div>
                             </div>
                         </div>
@@ -222,12 +221,12 @@
                                 <div class="card" style="margin-left: auto;
                             margin-right: auto;">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Bài số 2</strong>
+                                        <strong class="card-title mb-3">Level 2</strong>
                                     </div>
                                     <div class="card-body">
-                                        <p class="text-muted m-b-15">Câu cần gõ</p>
+                                        <p class="text-muted m-b-15">Âm cần gõ</p>
 
-                                        <h1>Mẹ mua áo mới cho An</h1>
+                                        <h1>ưa</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -239,24 +238,13 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Đếm giờ</strong>
+                                        <strong class="card-title mb-3">Số từ gõ đúng</strong>
                                     </div>
+                                    <br><br>
                                     <h1>
-                                        <span id="min">00</span> :
-                                        <span id="sec">00</span> :
-                                        <span id="milisec">00</span>
+                                        <span id="min">01</span>
                                     </h1>
-                                    <div class="row">
-                                        <div class="col-md-2" style="margin-left: 90px">
-                                            <button class="btn btn-primary" onclick="startStop()" id="start">Bắt đầu</button>
-
-                                        </div>
-                                        <div class="col-md-2" style="margin-left: 25px;">
-                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="start">Đặt
-                                                lại</button>
-
-                                        </div>
-                                    </div>
+                                    <br><br>
 
                                 </div>
                             </div>
@@ -487,11 +475,11 @@
                                 <br>
                                 <div style="margin-left: 180px;">
                                     <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Bật gợi ý
-                                    </button>
+                                    <i class="fa fa-dot-circle-o"></i> Bật gợi ý
+                                </button>
                                     <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Tắt gợi ý
-                                    </button>
+                                    <i class="fa fa-ban"></i> Tắt gợi ý
+                                </button>
                                 </div>
                             </div>
 
@@ -514,18 +502,17 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     </div>
                     <div class="modal-body" id="textSmallModal">
                         <!-- <p>
-                            Bạn đã gõ sai, bạn nên làm lại bài này
-                        </p> -->
+                        Bạn đã gõ sai, bạn nên làm lại bài này
+                    </p> -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"><a href="luyengocau.html" style="color: white">Bài trước</a></button>
-                        <button type="button" class="btn btn-secondary"><a href="luyengocau2.html" style="color: white">Làm lại</a></button>
-                        <button type="button" class="btn btn-primary"><a href="luyengocau3.html" style="color: white">Bài khác</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="hocGoAmChinh2.html" style="color: white">Làm lại</a></button>
+                        <button type="button" class="btn btn-primary"><a href="hocGoAmChinh3.html" style="color: white">Bài khác</a></button>
                     </div>
                 </div>
             </div>
@@ -563,6 +550,8 @@
     <script src="js/keyboard2.js"></script>
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
+        let flag = false;
+
         function show() {
             document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
             document.getElementById("demo").style.color = "blue";
@@ -577,10 +566,16 @@
             this.startStop()
         }
 
+        function click() {
+            startStop()
+            flag = true;
+            console.log("falgggg", flag);
+        }
+
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Mẹ mua áo mới cho An") {
-                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+            if (e === "ưa") {
+                document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện âm tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {
                 document.getElementById("demo").innerHTML = "Bạn nhập sai, yêu cầu nhập lại";
@@ -590,16 +585,19 @@
 
         function checkSentance2() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Mẹ mua áo mới cho An") {
+            if (e === "ưa") {
                 document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "blue";
-                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện âm tiếp theo!";
             } else {
                 document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "red";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
             }
-            // startStop()
+            console.log("flag", flag);
+            if (flag) {
+                startStop()
+            }
         }
     </script>
     <script src="js/stopwatch.js">

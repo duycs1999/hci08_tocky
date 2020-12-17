@@ -227,7 +227,7 @@
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Câu cần gõ</p>
 
-                                        <h1>Không có gì quý hơn độc lập tự do</h1>
+                                        <h1>Tôi chỉ có một ham muốn, ham muốn tột bậc: là làm sao cho nước nhà được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -497,6 +497,7 @@
 
                         </div>
                     </div>
+                    <br><br><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
@@ -564,8 +565,8 @@
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
         function show() {
-            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
-            document.getElementById("demo").style.color = "blue";
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: -TK T-OWJ SK-HS*I K-SO RHN-OWNT H-AT RH-SUON *-AW -K H-AT RH-SUON TN-OWNT PN*-WNK -YNT -K SR-HA SR-HAT S-AJK SK-O PR-SEWNK TK-HA TPN-EWNK H-HUN T-HUN TPN-OWNK SRN*-WTK *-AW -K SP*-WN T-A TPN-EWNK H-HUN T-HUN TN-UW SP-O *-AW -K TP-HOWG P-HAJK -AJ KN-SIUG K-SO K-WT *-AN -SAJK RHN*-ANK *-AW -K -AJ KN-SIUG TPN-EWNK HN-ONK H-HAK -AGKC";
+            document.getElementById("demo").style.color = "red";
         }
 
         function hide() {
@@ -579,7 +580,7 @@
 
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Không có gì quý hơn độc lập tự do") {
+            if (e === "Tôi chỉ có một ham muốn, ham muốn tột bậc: là làm sao cho nước nhà được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành") {
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {
@@ -590,7 +591,7 @@
 
         function checkSentance2() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Không có gì quý hơn độc lập tự do") {
+            if (e === "Tôi chỉ có một ham muốn, ham muốn tột bậc: là làm sao cho nước nhà được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành") {
                 document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "blue";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";

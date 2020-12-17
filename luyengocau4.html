@@ -227,7 +227,7 @@
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Câu cần gõ</p>
 
-                                        <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác</h1>
+                                        <h1>Non sông Việt Nam có trở nên vẻ vang hay không, dân tộc Việt Nam có sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các cháu</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -497,6 +497,7 @@
 
                         </div>
                     </div>
+                    <br><br><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
@@ -564,8 +565,8 @@
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
         function show() {
-            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
-            document.getElementById("demo").style.color = "blue";
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: -TK PR-ON S-OWG -NT SPRN-IENT -NT PR-AT K-SO TR-HSW PR-OEN SPR-HSE SPR-AG H-AJN KH-OWG *-AW -K SP*-WN TN-OWNK -NT SPRN-IENT -NT PR-AT K-SO S-SAK SPR-AJ SPR-SWJ K-SANK K-HEWG STK-SUONK PR*-AT SK*-WJG TPN-EWNK H-AJN KH-OWG *-AW -K SK-S*IK SR-HA TK-HW RHN-OWNT PH-H*WN SR-SWN -HSW K-OWG HN-ONK TN*-WTK K-HSUO K-SANK SK-SAJG -AGK";
+            document.getElementById("demo").style.color = "red";
         }
 
         function hide() {
@@ -579,7 +580,7 @@
 
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác") {
+            if (e === "Non sông Việt Nam có trở nên vẻ vang hay không, dân tộc Việt Nam có sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các cháu") {
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {

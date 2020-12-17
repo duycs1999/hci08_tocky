@@ -222,12 +222,12 @@
                                 <div class="card" style="margin-left: auto;
                             margin-right: auto;">
                                     <div class="card-header">
-                                        <strong class="card-title mb-3">Bài số 4</strong>
+                                        <strong class="card-title mb-3">Bài số 5</strong>
                                     </div>
                                     <div class="card-body">
                                         <p class="text-muted m-b-15">Câu cần gõ</p>
 
-                                        <h1>Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác</h1>
+                                        <h1>Học cái tốt thì khó, ví như người ta leo núi, phải vất vả, khó nhọc mới lên đến đỉnh. Học cái xấu thì dễ, như ở trên đỉnh núi trượt chân một cái là nhào xuống vực sâu</h1>
                                         <input id="answerSentence" onchange="checkSentance()" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Gõ vào đây:">
                                         <br>
                                         <div style="  display: flex;
@@ -497,6 +497,7 @@
 
                         </div>
                     </div>
+                    <br><br><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
@@ -563,8 +564,8 @@
     <link rel="stylesheet" href="./css/keyboard.css">
     <script>
         function show() {
-            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
-            document.getElementById("demo").style.color = "blue";
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: -TK HN-ONK K-SAJ T-SOWNT TH-H*I KH-SO *-AW -K SPR-S*I TK-UW KR-HEWJ T-A SR-EJK PR-SIUJ *-AW -K PH-HSAJ SPR-S*WNT SPR-HSA *-AW -K KH-SO TKN-ONK RH-SWJ SR-OEN TP-SOEN TP-HS*IK -J -NT HN-ONK K-SAJ ST-S*WJG TH-H*I SPN-SOE *-AW -K TK-UW -HSW TR-OEN TP-HS*IK PR-SIUJ TRN-EWNT SK*-WN RHN-OWNT K-SAJ SR-HA TK-HAJK ST-SUOG SPRN-UWNK S*-WJG";
+            document.getElementById("demo").style.color = "red";
         }
 
         function hide() {
@@ -578,7 +579,7 @@
 
         function checkSentance() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác") {
+            if (e === "Học cái tốt thì khó, ví như người ta leo núi, phải vất vả, khó nhọc mới lên đến đỉnh. Học cái xấu thì dễ, như ở trên đỉnh núi trượt chân một cái là nhào xuống vực sâu") {
                 document.getElementById("demo").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
                 document.getElementById("demo").style.color = "blue";
             } else {
@@ -589,7 +590,7 @@
 
         function checkSentance2() {
             let e = document.getElementById("answerSentence").value;
-            if (e === "Môn học không tự sinh ra, cũng không tự mất đi, nó chỉ chuyển từ kỳ học này qua kỳ học khác") {
+            if (e === "Học cái tốt thì khó, ví như người ta leo núi, phải vất vả, khó nhọc mới lên đến đỉnh. Học cái xấu thì dễ, như ở trên đỉnh núi trượt chân một cái là nhào xuống vực sâu") {
                 document.getElementById("demo").innerHTML = "";
                 document.getElementById("demo").style.color = "blue";
                 document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";

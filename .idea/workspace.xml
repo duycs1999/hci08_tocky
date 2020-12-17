@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c77a99-43de-4c24-86f9-69fb50df581e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/hci08_tocky.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hci08_tocky.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc.html" beforeDir="false" afterPath="$PROJECT_DIR$/abc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc2.html" beforeDir="false" afterPath="$PROJECT_DIR$/abc2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/c1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/c1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/g1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/g1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/xepgach1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/xepgach1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/xepgach2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/xepgach2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/xepgach3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/xepgach3.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/xepgach4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/xepgach4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking.html" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608132818163</updated>
       <workItem from="1608132821688" duration="5833000" />
-      <workItem from="1608169491481" duration="8807000" />
+      <workItem from="1608169491481" duration="12132000" />
     </task>
     <servers />
   </component>

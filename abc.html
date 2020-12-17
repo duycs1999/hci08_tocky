@@ -82,13 +82,13 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="index.html">
-                <img class="svg imgsvg" src="images/icon/logo.svg" alt="hci08"/>
+                <img class="svg imgsvg" src="images/icon/logo.svg" alt="hci08" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
             <nav class="navbar-sidebar">
                 <ul class="list-unstyled navbar__list">
-                    <li class="has-sub">
+                    <li class="active has-sub">
                         <a href="index.html">
                             <i class="fas fa-home"></i>Trang chủ</a>
                     </li>
@@ -97,13 +97,21 @@
                             <i class="fas fa-keyboard-o"></i>Học gõ</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="index.html">Học gõ từ</a>
+                                <a href="quytacgo.html">Bộ quy tắc gõ</a>
                             </li>
-                            <li>
-                                <a href="index.html">Học gõ câu</a>
-                            </li>
-                            <li>
-                                <a href="index.html">Học gõ văn bản</a>
+                            <li href="#">
+                                <a class="js-arrow" href="#"> Học gõ âm tiết</a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                    <li>
+                                        <a href="hocGoAmDauDS.html">- Âm tiết đầu</a>
+                                    </li>
+                                    <li>
+                                        <a href="hocGoAmChinhDS.html">- Âm chính</a>
+                                    </li>
+                                    <li>
+                                        <a href="hocGoAmCuoiDS.html">- Âm tiết cuối</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -112,30 +120,34 @@
                             <i class="fas fa-list"></i>Luyện tập</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="index.html">Luyện gõ từ</a>
+                                <a href="luyengotu-baihoc.html">Luyện gõ từ</a>
                             </li>
                             <li>
-                                <a href="index.html">Luyện gõ câu</a>
+                                <a href="luyengocau_danhsach.html">Luyện gõ câu</a>
                             </li>
                             <li>
                                 <a href="index.html">Luyện gõ văn bản</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="active has-sub">
+                    <li>
+                        <a href="tudien.html">
+                            <i class="fas fa-book"></i>Từ điển</a>
+                    </li>
+                    <li>
                         <a href="inbox.html">
                             <i class="fas fa-gamepad"></i>Trò chơi</a>
                     </li>
                     <li>
-                        <a href="index.html">
+                        <a href="challenge.html">
                             <i class="fas fa-group"></i>Thi đấu</a>
                     </li>
                     <li>
-                        <a href="index.html">
+                        <a href="ranking.html">
                             <i class="fas fa-signal"></i>Xếp hạng</a>
                     </li>
                     <li>
-                        <a href="index.html">
+                        <a href="intro.html">
                             <i class="fas fa-info-circle"></i>Giới thiệu</a>
                     </li>
                 </ul>
@@ -152,8 +164,7 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search"
-                                   placeholder="Tìm kiếm..."/>
+                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
                             <button class="au-btn--submit" type="submit">
                                 <i class="zmdi zmdi-search"></i>
                             </button>
@@ -204,10 +215,10 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/avatar.svg"/>
+                                        <img src="images/icon/avatar.svg" />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">Chu Nam An</a>
+                                        <a class="js-acc-btn" href="#">Đỗ Nam Trung</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="account-dropdown__body">
@@ -232,6 +243,7 @@
                 </div>
             </div>
         </header>
+        <!-- HEADER DESKTOP-->
         <!-- HEADER DESKTOP-->
 
         <!-- MAIN CONTENT-->

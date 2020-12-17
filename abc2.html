@@ -51,6 +51,14 @@
         top: 120px;
     }
 
+    .distance {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: green;
+        left: 130px;
+        top: 220px;
+    }
+
     .text2 {
         position: absolute;
         font-family: Arial, Helvetica, sans-serif;
@@ -97,6 +105,7 @@
     }
 </style>
 <body class="animsition">
+<script>var dist = 0; hasWon = 0;</script>
     <div class="page-wrapper">
 
         <!-- MENU SIDEBAR-->
@@ -109,7 +118,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a href="index.html">
                                 <i class="fas fa-home"></i>Trang chủ</a>
                         </li>
@@ -118,13 +127,21 @@
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Học gõ từ</a>
+                                    <a href="quytacgo.html">Bộ quy tắc gõ</a>
                                 </li>
-                                <li>
-                                    <a href="index.html">Học gõ câu</a>
-                                </li>
-                                <li>
-                                    <a href="index.html">Học gõ văn bản</a>
+                                <li href="#">
+                                    <a class="js-arrow" href="#"> Học gõ âm tiết</a>
+                                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                        <li>
+                                            <a href="hocGoAmDauDS.html">- Âm tiết đầu</a>
+                                        </li>
+                                        <li>
+                                            <a href="hocGoAmChinhDS.html">- Âm chính</a>
+                                        </li>
+                                        <li>
+                                            <a href="hocGoAmCuoiDS.html">- Âm tiết cuối</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -133,30 +150,34 @@
                                 <i class="fas fa-list"></i>Luyện tập</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Luyện gõ từ</a>
+                                    <a href="luyengotu-baihoc.html">Luyện gõ từ</a>
                                 </li>
                                 <li>
-                                    <a href="index.html">Luyện gõ câu</a>
+                                    <a href="luyengocau_danhsach.html">Luyện gõ câu</a>
                                 </li>
                                 <li>
                                     <a href="index.html">Luyện gõ văn bản</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="active has-sub">
+                        <li>
+                            <a href="tudien.html">
+                                <i class="fas fa-book"></i>Từ điển</a>
+                        </li>
+                        <li>
                             <a href="inbox.html">
                                 <i class="fas fa-gamepad"></i>Trò chơi</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="challenge.html">
                                 <i class="fas fa-group"></i>Thi đấu</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="ranking.html">
                                 <i class="fas fa-signal"></i>Xếp hạng</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="intro.html">
                                 <i class="fas fa-info-circle"></i>Giới thiệu</a>
                         </li>
                     </ul>
@@ -227,7 +248,7 @@
                                             <img src="images/icon/avatar.svg" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Chu Nam An</a>
+                                            <a class="js-acc-btn" href="#">Đỗ Nam Trung</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="account-dropdown__body">
@@ -252,6 +273,7 @@
                     </div>
                 </div>
             </header>
+            <!-- HEADER DESKTOP-->
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
@@ -302,16 +324,23 @@
                                             break;
                                         }
                                     }
-                                    if (tmp == 0) {
+                                    if (tmp == 0 && hasWon == 0) {
                                         //tất cả đều đã highlight
                                         alert("Chúc mừng bạn đã giành chiến thắng !!")
+                                        hasWon = 1;
                                     }
+                                    document.getElementById("score").innerText = "Điểm: " + Math.floor(new Date().getTime() % 1000000)
+                                    document.getElementById("distance").innerText = "Đã chạy: " + dist++ +" m"
+
                                 }
                             </script>
 
                             <h2 id="demo" class="score2"></h2>
                             <h2 id="score" class="level">
                                 Điểm: 0
+                            </h2>
+                            <h2 id="distance" class="distance">
+                                Đã chạy: 0m
                             </h2>
 
                             <div id="row1">

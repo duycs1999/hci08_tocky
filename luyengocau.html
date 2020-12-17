@@ -241,6 +241,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card">
+                                    <p id="time"></p>
                                     <div class="card-header">
                                         <strong class="card-title mb-3">Đếm giờ</strong>
                                     </div>
@@ -251,12 +252,10 @@
                                     </h1>
                                     <div class="row">
                                         <div class="col-md-2" style="margin-left: 60px">
-                                            <button class="btn btn-primary" onclick="click()" id="start">Bắt đầu</button>
-
+                                            <button class="btn btn-primary" onclick="startStop()" id="start">Start</button>
                                         </div>
                                         <div class="col-md-2" style="margin-left: 25px;">
-                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="start">Đặt
-                                                lại</button>
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="star t">Stop</button>
 
                                         </div>
                                     </div>
@@ -607,12 +606,44 @@
             }
             console.log("flag",flag);
             if (flag) {
-                startStop()
+                // startStop()
             }
         }
     </script>
     <script src="js/stopwatch.js">
     </script>
+      <p id="demo2"></p>
+
+      <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        // Display the result in the element with id="demo"
+        document.getElementById("time").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("time").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
 </body>
 
 </html>

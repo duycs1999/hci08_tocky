@@ -6,21 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
+    <meta name="author" content="hci_08">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Tocky.vn - Nền tảng luyện gõ nhanh và chính xác</title>
+    <title>Bộ quy tắc gõ</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
@@ -41,8 +37,7 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-
-        <!-- MENU SIDEBAR-->
+        <!-- sidebar ben phai-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="index.html">
@@ -56,20 +51,31 @@
                             <a href="index.html">
                                 <i class="fas fa-home"></i>Trang chủ</a>
                         </li>
-                        <li class="has-sub">
-                            <a class= "js-arrow" href="#">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
                                 <i class="fas fa-keyboard-o"></i>Học gõ</a>
-                                <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                    <li>
-                                        <a href="index.html">Học gõ từ</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Học gõ câu</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Học gõ văn bản</a>
-                                    </li>
-                                </ul>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li >
+                                    <a href="quytacgo.html">Bộ quy tắc gõ</a>
+                                </li>
+                                <li href="#">
+                                    <a class="js-arrow" href="#"> Học gõ âm tiết</a>
+                                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                        <li>
+                                            <a href="">- Âm tiết đầu</a>
+                                        </li>
+                                        <li>
+                                            <a href="">- Âm chính</a>
+                                        </li>
+                                        <li>
+                                            <a href="">- Âm tiết cuối</a>
+                                        </li>
+                                        <li>
+                                            <a href="">- Âm tiết hỗn hợp</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
@@ -79,7 +85,7 @@
                                     <a href="index.html">Luyện gõ từ</a>
                                 </li>
                                 <li>
-                                    <a href="index.html">Luyện gõ câu</a>
+                                    <a href="luyengocau.html">Luyện gõ câu</a>
                                 </li>
                                 <li>
                                     <a href="index.html">Luyện gõ văn bản</a>
@@ -88,18 +94,22 @@
                         </li>
                         <li>
                             <a href="index.html">
+                                <i class="fas fa-book"></i>Từ điển</a>
+                        </li>
+                        <li>
+                            <a href="index.html">
                                 <i class="fas fa-gamepad"></i>Trò chơi</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="challenge.html">
                                 <i class="fas fa-group"></i>Thi đấu</a>
                         </li>
-                        <li>
+                        <li class='active'>
                             <a href="index.html">
                                 <i class="fas fa-signal"></i>Xếp hạng</a>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="intro.html">
                                 <i class="fas fa-info-circle"></i>Giới thiệu</a>
                         </li>
                     </ul>
@@ -171,7 +181,7 @@
                                             <img src="images/icon/avatar.svg" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Chu Nam An</a>
+                                            <a class="js-acc-btn" href="#">Đỗ Nam Trung</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="account-dropdown__body">
@@ -202,87 +212,340 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-
-                        <!-- content -->
-                        <div class="content-competition">
-                            <div>
-                              <label>Chọn thời gian đấu</label>
-                              <div><input type="number" style="background: white; width: 100px; border-radius: 5px; ">&nbsp;(phút)</div>
-                              <button style="margin-top: 10px; background-color: blue; color: white; border-radius: 5px;">Sẵn sàng</button>
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Luyện gõ câu</h2>
+                                </div>
                             </div>
-                          </div>
-                          <div id="container">
-                            <textarea style="width: 655px; height: 100px; background-color: white; color: black;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</textarea>
-                            <textarea id="write" rows="6" cols="60"></textarea>
-                            <ul id="keyboard">
-                                <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
-                                <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
-                                <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
-                                <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
-                                <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
-                                <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
-                                <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-                                <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
-                                <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
-                                <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
-                                <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
-                                <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
-                                <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-                                <li class="delete lastitem">delete</li>
-                                <li class="tab">tab</li>
-                                <li class="letter">q</li>
-                                <li class="letter">w</li>
-                                <li class="letter">e</li>
-                                <li class="letter">r</li>
-                                <li class="letter">t</li>
-                                <li class="letter">y</li>
-                                <li class="letter">u</li>
-                                <li class="letter">i</li>
-                                <li class="letter">o</li>
-                                <li class="letter">p</li>
-                                <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
-                                <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
-                                <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
-                                <li class="capslock">caps lock</li>
-                                <li class="letter">a</li>
-                                <li class="letter">s</li>
-                                <li class="letter">d</li>
-                                <li class="letter">f</li>
-                                <li class="letter">g</li>
-                                <li class="letter">h</li>
-                                <li class="letter">j</li>
-                                <li class="letter">k</li>
-                                <li class="letter">l</li>
-                                <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
-                                <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
-                                <li class="return lastitem">return</li>
-                                <li class="left-shift">shift</li>
-                                <li class="letter">z</li>
-                                <li class="letter">x</li>
-                                <li class="letter">c</li>
-                                <li class="letter">v</li>
-                                <li class="letter">b</li>
-                                <li class="letter">n</li>
-                                <li class="letter">m</li>
-                                <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
-                                <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
-                                <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
-                                <li class="right-shift lastitem">shift</li>
-                                <li class="space lastitem">&nbsp;</li>
-                            </ul>
+                        </div>
+                        <br> -->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card" style="margin-left: auto;
+                                                        margin-right: auto;">
+                                    <div class="row" style="margin-left: auto;
+                                    margin-right: auto;">
+                                        <div class="card-header ">
+                                            <img src="images/avt5.jpg " width="40px" />
+                                            <label>Bạn</label>
+                                        </div>
+                                        <div class="card-header ">
+                                            <input type="range" id="volume" name="volume" min="0" max="11">
+                                        </div>
+                                        <div class="card-header">
+                                            <img src="images/avt4.jpg" width="40px" />
+                                            <label>Đối thủ</label>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-muted m-b-15">Nội dung</p>
+                            
+                                        <h1>Lan đi học</h1>
+                            
+                                        <input id="answerSentence" onkeydown="checkKey()" type="text" class="form-control" aria-required="true"
+                                            aria-invalid="false" placeholder="Gõ vào đây:">
+                                        <br>
+                                        <!-- <div style="  display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;"><button data-toggle="modal" data-target="#smallmodal" class="btn btn-success" onclick="checkSentance2();">Kiểm tra</button></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <!-- <p id="time"></p> -->
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Bắt đầu thi đấu</strong>
+                                    </div>
+                                    <h1>
+                                        <span id="min">00</span> :
+                                        <span id="sec">00</span>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-md-2" style="margin-left: 60px">
+                                            <button class="btn btn-primary" onclick="run()" id="start">Start</button>
+                                        </div>
+                                        <div class="col-md-2" style="margin-left: 25px;">
+                                            <button style="width: 245%;" class="btn btn-danger" onclick="reset()" id="star t">Stop</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p id="time" ></p>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2020 HCI_08. All rights reserved.</p>
+                        <!-- keyboard -->
+                        <div class="row ">
+                            <div class="col-md-6 " style="transform: scale(1.5,1.5); margin-left: 160px; margin-right: -160px; margin-top: 50px; ">
+                                <div class="keyboard ">
+                                   
+                                    <div class="keyboard__row ">
+                                        <div class="key--double " data-key="192 ">
+                                            <div>~</div>
+                                            <div>`</div>
+                                        </div>
+                                        <div class="key--double " data-key="49 ">
+                                            <div>!</div>
+                                            <div>1</div>
+                                        </div>
+                                        <div class="key--double " data-key="50 ">
+                                            <div>@</div>
+                                            <div>2</div>
+                                        </div>
+                                        <div class="key--double " data-key="51 ">
+                                            <div>#</div>
+                                            <div>3</div>
+                                        </div>
+                                        <div class="key--double " data-key="52 ">
+                                            <div>$</div>
+                                            <div>4</div>
+                                        </div>
+                                        <div class="key--double " data-key="53 ">
+                                            <div>%</div>
+                                            <div>5</div>
+                                        </div>
+                                        <div class="key--double " data-key="54 ">
+                                            <div>^</div>
+                                            <div>6</div>
+                                        </div>
+                                        <div class="key--double " data-key="55 ">
+                                            <div>&</div>
+                                            <div>7</div>
+                                        </div>
+                                        <div class="key--double " data-key="56 ">
+                                            <div>*</div>
+                                            <div>8</div>
+                                        </div>
+                                        <div class="key--double " data-key="57 ">
+                                            <div>(</div>
+                                            <div>9</div>
+                                        </div>
+                                        <div class="key--double " data-key="48 ">
+                                            <div>)</div>
+                                            <div>0</div>
+                                        </div>
+                                        <div class="key--double " data-key="189 ">
+                                            <div>_</div>
+                                            <div>-</div>
+                                        </div>
+                                        <div class="key--double " data-key="187 ">
+                                            <div>+</div>
+                                            <div>=</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w4 " data-key="8 ">
+                                            <span>delete</span>
+                                        </div>
+                                    </div>
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w4 " data-key="9 ">
+                                            <span>tab</span>
+                                        </div>
+                                        <div class="key--letter " data-char="Q ">Q</div>
+                                        <div class="key--letter " data-char="W ">W</div>
+                                        <div class="key--letter " data-char="E ">E</div>
+                                        <div class="key--letter " data-char="R ">R</div>
+                                        <div class="key--letter " data-char="T ">T</div>
+                                        <div class="key--letter " data-char="Y ">Y</div>
+                                        <div class="key--letter " data-char="U ">U</div>
+                                        <div class="key--letter " data-char="I ">I</div>
+                                        <div class="key--letter " data-char="O ">O</div>
+                                        <div class="key--letter " data-char="P ">P</div>
+                                        <div class="key--double " data-key="219 " data-char="{[ ">
+                                            <div>{</div>
+                                            <div>[</div>
+                                        </div>
+                                        <div class="key--double " data-key="221 " data-char="}] ">
+                                            <div>}</div>
+                                            <div>]</div>
+                                        </div>
+                                        <div class="key--double " data-key="220 " data-char="|\ ">
+                                            <div>|</div>
+                                            <div>\</div>
+                                        </div>
+                                    </div>
+                                    <div class="keyboard__row ">
+                                        <div class="key--bottom-left key--word key--w5 " data-key="20 ">
+                                            <span>caps lock</span>
+                                        </div>
+                                        <div class="key--letter " data-char="A ">A</div>
+                                        <div class="key--letter " data-char="S ">S</div>
+                                        <div class="key--letter " data-char="D ">D</div>
+                                        <div class="key--letter " data-char="F ">F</div>
+                                        <div class="key--letter " data-char="G ">G</div>
+                                        <div class="key--letter " data-char="H ">H</div>
+                                        <div class="key--letter " data-char="J ">J</div>
+                                        <div class="key--letter " data-char="K ">K</div>
+                                        <div class="key--letter " data-char="L ">L</div>
+                                        <div class="key--double " data-key="186 ">
+                                            <div>:</div>
+                                            <div>;</div>
+                                        </div>
+                                        <div class="key--double " data-key="222 ">
+                                            <div>"</div>
+                                            <div>'</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w5" data-key="13">
+                                            <span>return</span>
+                                        </div>
+                                    </div>
+                                    <div class="keyboard__row">
+                                        <div class="key--bottom-left key--word key--w6" data-key="16">
+                                            <span>shift</span>
+                                        </div>
+                                        <div class="key--letter" data-char="Z">Z</div>
+                                        <div class="key--letter" data-char="X">X</div>
+                                        <div class="key--letter" data-char="C">C</div>
+                                        <div class="key--letter" data-char="V">V</div>
+                                        <div class="key--letter" data-char="B">B</div>
+                                        <div class="key--letter" data-char="N">N</div>
+                                        <div class="key--letter" data-char="M">M</div>
+                                        <div class="key--double" data-key="188">
+                                            <div>&lt;</div>
+                                            <div>,</div>
+                                        </div>
+                                        <div class="key--double" data-key="190">
+                                            <div>&gt;</div>
+                                            <div>.</div>
+                                        </div>
+                                        <div class="key--double" data-key="191">
+                                            <div>?</div>
+                                            <div>/</div>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w6" data-key="16-R">
+                                            <span>shift</span>
+                                        </div>
+                                    </div>
+                                    <div class="keyboard__row keyboard__row--h3">
+                                        <div class="key--bottom-left key--word">
+                                            <span>fn</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="17">
+                                            <span>control</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="18">
+                                            <span>option</span>
+                                        </div>
+                                        <div class="key--bottom-right key--word key--w3" data-key="91">
+                                            <span>command</span>
+                                        </div>
+                                        <div class="key--double key--right key--space" data-key="32" data-char=" ">
+                                            &nbsp;
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w3" data-key="93-R">
+                                            <span>command</span>
+                                        </div>
+                                        <div class="key--bottom-left key--word key--w1" data-key="18-R">
+                                            <span>option</span>
+                                        </div>
+                                        <div data-key="37" class="key--arrow">
+                                            <span>&#9664;</span>
+                                        </div>
+                                        <div class="key--double key--arrow--tall" data-key="38">
+                                            <div>&#9650;</div>
+                                            <div>&#9660;</div>
+                                        </div>
+                                        <div data-key="39" class="key--arrow">
+                                            <span>&#9654;</span>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="col-md-6" style="transform: scale(1.5,1.5);
+                            margin-left: 0;
+                            margin-right: 0px;
+                            margin-top: 50px;">
+                                <div class="keyboard-steno">
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="Q">S</div>
+                                        <div class="key--letter" data-char-steno="W">K</div>
+                                        <div class="key--letter" data-char-steno="E">R</div>
+                                        <div class="key--letter" data-char-steno="R">N</div>
+                                        <div class="key--letter" data-char-steno="T">H</div>
+                                        <div class="key--letter" data-char-steno="U">*</div>
+                                        <div class="key--letter" data-char-steno="I">W</div>
+                                        <div class="key--letter" data-char-steno="O">J</div>
+                                        <div class="key--letter" data-char-steno="P">N</div>
+                                        <div class="key--letter" data-key-steno="219" data-char-steno="{[">T</div>
+                                    </div>
+                                    <br>
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" id="steno-key" data-char-steno="A">T</div>
+                                        <div class="key--letter" data-char-steno="S">P</div>
+                                        <div class="key--letter" data-char-steno="D">H</div>
+                                        <div class="key--letter" data-char-steno="F">N</div>
+                                        <div class="key--letter" data-char-steno="G">S</div>
+                                        <div class="key--letter" data-char-steno="J">I</div>
+                                        <div class="key--letter" data-char-steno="K">Y</div>
+                                        <div class="key--letter" data-char-steno="L">J</div>
+
+                                        <!-- dau ';' -->
+
+                                        <div class="key--letter" data-key-steno="186">G</div>
+                                        <div class="key--letter" data-key-steno="222">K</div>
+                                    </div><br>
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="C">U</div>
+                                        <div class="key--letter" data-char-steno="V">O</div>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="keyboard__row__steno">
+                                        <div class="key--letter" data-char-steno="N">E</div>
+                                        <div class="key--letter" data-char-steno="M">A</div>
+                                    </div>
+                                </div>
+                                <!-- <br>
+                                <div style="margin-left: 180px;">
+                                    <button onclick="show()" type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Bật gợi ý
+                                    </button>
+                                    <button onclick="hide()" type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Tắt gợi ý
+                                    </button>
+                                </div> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2020 HCI_08. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- <div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smallmodalLabel">Thông Báo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="textSmallModal">
+                        <!-- <p>
+                            Bạn đã gõ sai, bạn nên làm lại bài này
+                        </p> -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" ><a href="luyengocau.html" style="color: white">Làm lại</a></button>
+                        <button type="button" class="btn btn-primary"><a href="luyengocau2.html" style="color: white">Bài khác</a></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- END MAIN CONTENT-->
+        <!-- END PAGE CONTAINER-->
+    </div>
 
     </div>
 
@@ -309,7 +572,103 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/keyboard2.js"></script>
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <script>
+        let flag = false;
+        function show() {
+            document.getElementById("demo").innerHTML = "Ký tự cần nhập: A-D-G-J-C";
+            document.getElementById("demo").style.color = "blue";
+        }
+        function hide() {
+            document.getElementById("demo").innerHTML = "";
+        }
 
+        function startCount() {
+            this.reset()
+            this.startStop()
+        }
+        function click(){
+            startStop()
+            flag = true;
+            console.log("falgggg", flag);
+        }
+
+        function checkKey() {
+            let e = document.getElementById("answerSentence");
+            console.log(e);
+            
+        }
+        function checkSentance2(){
+            let e = document.getElementById("answerSentence").value;
+            if (e === "Lan đi học"){
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "blue";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập đúng, luyện câu tiếp theo!";
+            } else {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("textSmallModal").innerHTML = "Bạn nhập sai, yêu cầu nhập lại!";
+            }
+            console.log("flag",flag);
+            if (flag) {
+                // startStop()
+            }
+        }
+        function run(){
+            var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+            var countDay = new Date().getTime() + 1000*60*3 + 1000;
+      
+        // Update the count down every 1 second
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        // var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        // var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // var milisec = Math.floor((distance % (1000 * 60)));
+            var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+        console.log(now);
+      
+        // Find the distance between now and the count down date
+        var distance = countDay - now ;
+      
+        // Time calculations for days, hours, minutes and seconds
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var milisec = Math.floor((distance ));
+        // var hour = 0;
+        // var minutes = 5;
+        // var seconds = 0;
+      
+        // Display the result in the element with id="demo"
+        
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("time").innerHTML = "EXPIRED";
+          document.getElementById("min").innerHTML =  00;
+        document.getElementById("sec").innerHTML =  00;
+        } else {
+            document.getElementById("min").innerHTML =  minutes;
+            document.getElementById("sec").innerHTML =  seconds;
+        }
+      }, 1000);
+        }
+    </script>
+    <script src="js/stopwatch.js">
+    </script>
+      <p id="demo2"></p>
+
+      <script>
+      // Set the date we're counting down to
+      
+      </script>
 </body>
 
 </html>
